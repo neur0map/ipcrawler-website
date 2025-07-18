@@ -21,6 +21,7 @@
 https://github.com/user-attachments/assets/5112ecd8-d721-4dce-8f86-f3f2effc451c
 
 *Watch IPCrawler's SmartList algorithm in action - intelligent wordlist selection based on discovered services*
+*Still in very early stages, It does not uses AI or ML*
 
 </div>
 
