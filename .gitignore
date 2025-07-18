@@ -16,8 +16,7 @@ pnpm-lock.yaml
 
 # production
 /build
-claude.md
-ipcrawler_summary.md
+local_files/
 
 # misc
 .DS_Store

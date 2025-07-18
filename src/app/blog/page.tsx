@@ -1,5 +1,5 @@
 import { Column, Heading, Meta, Schema, Flex, Text, Badge, RevealFx, Icon, SmartLink, Tag } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
+import { Discord } from "@/components";
 import { baseURL, blog, person, newsletter } from "@/resources";
 import { getPosts } from '@/utils/utils';
 import { formatDate } from '@/utils/formatDate';
@@ -193,7 +193,7 @@ export default function Blog() {
       {/* Subscribe */}
       {newsletter.display && (
         <RevealFx translateY="16" delay={0.4}>
-          <Mailchimp newsletter={newsletter} />
+          <Discord newsletter={newsletter} />
         </RevealFx>
       )}
     </Column>

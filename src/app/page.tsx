@@ -2,7 +2,7 @@ import React from "react";
 
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Schema, CodeBlock } from "@once-ui-system/core";
 import { home, about, person, newsletter, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
+import { Discord } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 
 export default function Home() {
@@ -168,7 +168,7 @@ make install`,
       {/* Newsletter */}
       {newsletter.display && (
         <RevealFx translateY="24" delay={1.0}>
-          <Mailchimp newsletter={newsletter} />
+          <Discord newsletter={newsletter} />
         </RevealFx>
       )}
     </Column>

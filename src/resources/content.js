@@ -15,11 +15,11 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to SmartList Updates</>,
+  title: <>Join Our Discord Community</>,
   description: (
     <>
-      Get notified when SmartList adds new technology patterns, wordlist updates, and 
-      intelligence improvements that make recommendations even more accurate.
+      Connect with other security researchers, get help with IPCrawler, share findings, 
+      and be the first to know about SmartList updates and new features.
     </>
   ),
 };

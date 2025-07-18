@@ -1,6 +1,6 @@
 export { Header } from "@/components/Header";
 export { Footer } from "@/components/Footer";
-export { Mailchimp } from "@/components/Mailchimp";
+export { Discord } from "@/components/Discord";
 export { DocumentationCard } from "@/components/DocumentationCard";
 export { HeadingLink } from "@/components/HeadingLink";
 export { RouteGuard } from "@/components/RouteGuard";
