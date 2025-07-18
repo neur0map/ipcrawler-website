@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![IPCrawler Logo](./public/images/logo.png)
+<img src="./public/images/logo.png" alt="IPCrawler Logo" width="200"/>
 
 **The official website for IPCrawler - Never Guess Wordlists Again**
 
@@ -14,7 +14,16 @@
 
 </div>
 
-https://github.com/user-attachments/assets/hero_video.mp4
+## 🎬 Demo Video
+
+<div align="center">
+  <video width="800" controls>
+    <source src="./public/videos/hero_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+*Watch IPCrawler's SmartList algorithm in action - intelligent wordlist selection based on discovered services*
 
 ## 🎯 What is IPCrawler?
 
