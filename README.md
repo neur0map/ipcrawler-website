@@ -1,116 +1,187 @@
-# IPCrawler Website
+# IPCrawler Website 🚀
 
-The official website for IPCrawler - an intelligent network reconnaissance orchestrator with SmartList wordlist recommendations.
+<div align="center">
 
-![IPCrawler](public/images/og/home.jpg)
+![IPCrawler Logo](./public/images/logo.png)
 
-## Overview
+**The official website for IPCrawler - Never Guess Wordlists Again**
 
-This website showcases IPCrawler's breakthrough SmartList algorithm that eliminates wordlist guesswork through intelligent pattern matching and technology detection.
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.1-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-## Features
+[🌐 Live Website](https://ipcrawler.io) • [📖 Documentation](https://ipcrawler.io/work) • [🔬 SmartList Algorithm](https://ipcrawler.io/about) • [📝 Changelog](https://ipcrawler.io/blog)
 
-- **Modern Design**: Built with Next.js and Once UI design system
-- **Dark Theme**: Terminal-inspired aesthetic with green/cyan accents
-- **Interactive Documentation**: Comprehensive guide with code examples
-- **Changelog Timeline**: Beautiful version history display
-- **Responsive**: Optimized for all screen sizes
-- **Fast**: Built with performance in mind
+</div>
 
-## Getting Started
+https://github.com/user-attachments/assets/hero_video.mp4
 
-### Prerequisites
+## 🎯 What is IPCrawler?
 
-- Node.js v18.17+
-- npm or yarn
+IPCrawler is an **intelligent network reconnaissance orchestrator** that revolutionizes penetration testing workflows. Instead of manually running separate nmap scans, directory busters, and service enumeration tools, IPCrawler intelligently chains these operations with its breakthrough **SmartList algorithm**.
 
-### Installation
+### 🔥 The Problem We Solve
 
-1. Clone the repository
+Traditional pentest workflow is painfully manual:
+- ⏰ Run nmap for port discovery (slow on all 65,535 ports)
+- 🔄 Run nmap again for service detection on discovered ports  
+- 🤔 Run directory enumeration tools (but which wordlist to use?)
+- 👨‍💻 Manual service enumeration based on findings
+
+### ⚡ IPCrawler's Solution
+
+- **🎯 2-Phase Smart Scanning**: Fast discovery → Targeted analysis (80-90% time reduction)
+- **🧠 SmartList Algorithm**: Automatically picks the best wordlists based on discovered services
+- **⚡ Parallel Processing**: Runs multiple scans simultaneously
+- **📊 Real-time Results**: See findings as they're discovered
+- **📋 Comprehensive Reporting**: JSON, TXT, and HTML outputs
+
+## 🏗️ Website Architecture
+
+This website is built with cutting-edge web technologies to showcase IPCrawler's capabilities:
+
+```
+📁 Project Structure
+├── 🎨 src/app/                 # Next.js App Router
+│   ├── 🏠 page.tsx            # Homepage with hero video
+│   ├── 🧠 about/              # SmartList algorithm explanation
+│   ├── 📝 blog/               # Changelog & updates
+│   └── 📖 work/               # Complete documentation
+├── 🧩 src/components/         # Reusable React components
+├── 📚 src/resources/          # Content & configuration
+│   ├── content.js            # Site metadata & content
+│   └── once-ui.config.js     # Theme customization
+├── 🌍 public/
+│   ├── 🖼️ images/logo.png     # IPCrawler branding
+│   └── 🎬 videos/hero_video.mp4 # Product demonstration
+└── 📄 local_files/           # Technical documentation
+    ├── IPCrawler_Summary.md  # Detailed tool overview
+    └── SMARTLIST_ALGORITHM.md # Algorithm deep-dive
+```
+
+## 🎨 Design System
+
+- **Framework**: Next.js 15.3.1 with React 19
+- **UI Library**: Once UI design system
+- **Theme**: Terminal-inspired dark aesthetic with green/cyan accents
+- **Typography**: Code-friendly fonts for developer audience
+- **Responsive**: Mobile-first design approach
+
+## 🚀 Quick Start
+
 ```bash
+# Clone the repository
 git clone https://github.com/neur0map/ipcrawler-website.git
 cd ipcrawler-website
-```
 
-2. Install dependencies
-```bash
+# Install dependencies
 npm install
-```
 
-3. Run development server
-```bash
+# Start development server
 npm run dev
-```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Project Structure
-
-```
-src/
-├── app/           # Next.js app directory
-│   ├── about/     # About page
-│   ├── blog/      # Changelog page
-│   ├── work/      # Documentation page
-│   └── page.tsx   # Homepage
-├── components/    # React components
-├── resources/     # Content and configuration
-│   ├── content.js # Site content
-│   └── once-ui.config.js # Theme configuration
-└── styles/        # CSS modules
-```
-
-## Configuration
-
-### Content
-
-Edit `src/resources/content.js` to update:
-- Site metadata
-- Navigation labels
-- Page content
-- Social links
-
-### Theme
-
-Edit `src/resources/once-ui.config.js` to customize:
-- Color scheme
-- Typography
-- Effects
-- Layout options
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Deploy with default settings
-
-### Other Platforms
-
-Build for production:
-```bash
+# Build for production
 npm run build
 ```
 
-The output will be in the `.next` directory.
+Visit `http://localhost:3000` to see the website in action!
 
-## License
+## 🧠 SmartList Algorithm
+
+The website's centerpiece is explaining IPCrawler's breakthrough **SmartList algorithm**:
+
+### How It Works
+1. **🔍 Service Discovery**: Identifies running services (WordPress, Tomcat, MySQL, etc.)
+2. **🎯 Technology Mapping**: Maps services to relevant attack vectors
+3. **📊 Confidence Scoring**: Rates wordlist recommendations (HIGH/MEDIUM/LOW)
+4. **📚 Intelligent Selection**: Picks optimal wordlists from SecLists catalog
+
+### Example Intelligence
+```
+🔍 Discovered: WordPress on port 443
+📋 Recommends: wordpress-https.txt, wp-plugins.txt, cms-common.txt
+
+🔍 Discovered: Tomcat on port 8080  
+📋 Recommends: tomcat-manager.txt, java-servlets.txt
+
+🔍 Discovered: MySQL on port 3306
+📋 Recommends: mysql-admin.txt, phpmyadmin.txt
+```
+
+## 🎯 Target Audience
+
+### 🏆 CTF Players & HTB Users
+Get first blood by completing recon in 2 minutes instead of 20
+
+### 🔒 Professional Pentesters  
+Bill more hours on exploitation instead of enumeration
+
+### 🔬 Security Researchers
+Find attack surfaces faster with intelligent tool chaining
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Frontend** | Next.js 15.3.1, React 19, TypeScript |
+| **Styling** | Once UI, SCSS Modules, CSS Variables |
+| **Content** | MDX for documentation |
+| **Performance** | Turbopack, Image Optimization |
+| **Deployment** | Vercel (Production), GitHub Actions |
+
+## 📱 Key Features
+
+### 🏠 Homepage
+- Hero section with value proposition
+- 3D video display showcasing IPCrawler in action
+- Quick installation guide (30-second setup)
+- Recent updates feed
+
+### 🧠 Algorithm Page (`/about`)
+- SmartList algorithm explanation
+- "Old way" vs "Smart way" comparison
+- Technical deep-dive with examples
+
+### 📖 Documentation Hub (`/work`)
+- Complete implementation guide
+- Algorithm documentation
+- Service analysis details
+- HTTP intelligence features
+
+### 📝 Changelog (`/blog`)
+- Version history timeline
+- Feature announcements
+- Release notes
+
+## 🎬 Video Integration
+
+The hero video (`public/videos/hero_video.mp4`) demonstrates:
+- Real-time IPCrawler execution
+- SmartList recommendations in action
+- Terminal-style output with syntax highlighting
+- Speed comparison vs traditional methods
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [contribution guidelines](CONTRIBUTING.md) for details.
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Links
+## 🔗 Links
 
-- [IPCrawler Repository](https://github.com/neur0map/ipcrawler)
-- [Live Website](https://ipcrawler.io)
-- [Documentation](https://ipcrawler.io/work)
+- **🌐 Live Website**: [ipcrawler.io](https://ipcrawler.io)
+- **🐙 Main Tool**: [IPCrawler Repository](https://github.com/neur0map/ipcrawler)
+- **📖 Documentation**: [ipcrawler.io/work](https://ipcrawler.io/work)
+- **🧠 SmartList Info**: [ipcrawler.io/about](https://ipcrawler.io/about)
 
-## Contributing
+---
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+<div align="center">
 
-## Support
+**Made with ❤️ by the IPCrawler team**
 
-For issues related to:
-- IPCrawler tool: [Create an issue](https://github.com/neur0map/ipcrawler/issues)
-- Website: [Create an issue](https://github.com/neur0map/ipcrawler-website/issues)
+*Revolutionizing network reconnaissance, one smart scan at a time*
+
+</div>
