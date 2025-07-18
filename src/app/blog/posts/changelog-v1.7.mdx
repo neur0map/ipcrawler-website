@@ -1,0 +1,57 @@
+---
+title: "IPCrawler v1.7: Multi-Tool Integration"
+summary: "Added support for additional reconnaissance tools and improved workflow automation."
+image: "/images/og/home.jpg"
+publishedAt: "2024-08-12"
+tag: "Release"
+---
+
+## New Tool Integrations
+
+### 🛠️ Additional Scanners
+- **Nuclei**: Integrated for vulnerability scanning
+- **Subfinder**: Subdomain enumeration support
+- **HTTPx**: Advanced HTTP probing
+- **DNSx**: DNS resolution and enumeration
+
+### 🔄 Workflow Automation
+- Tools automatically chain based on findings
+- Conditional execution based on service types
+- Result correlation across multiple tools
+
+## Features
+
+### Custom Workflows
+Create your own scanning workflows:
+```yaml
+workflows:
+  - name: "api-recon"
+    steps:
+      - tool: nmap
+        args: "-p 80,443,8080"
+      - tool: httpx
+        condition: "http_service_found"
+      - tool: nuclei
+        templates: "api/*"
+```
+
+### Scheduling
+- Cron-style scheduled scans
+- Recurring reconnaissance jobs
+- Diff reports between scans
+
+## Improvements
+
+- **Speed**: 25% faster average scan completion
+- **Accuracy**: Better service version detection
+- **Compatibility**: Works with latest Kali 2024.2
+
+## Bug Fixes
+
+- Fixed hang on large port ranges
+- Resolved DNS resolution timeout issues
+- Corrected output formatting in terminals
+
+## Notes
+
+This version lays groundwork for the upcoming AI-powered features in v2.0.

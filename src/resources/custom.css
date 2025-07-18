@@ -52,3 +52,53 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* Smooth theme transition animation */
+html {
+  transition: color-scheme 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  transition: 
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    fill 0.3s ease-in-out,
+    stroke 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+/* Preserve specific animations and transitions */
+[data-animate="true"],
+.animate,
+.transition-none {
+  transition: none !important;
+}
+
+/* Smooth theme toggle animation */
+.theme-toggle-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.theme-toggle-animation.animating::before {
+  transform: scale(1);
+}

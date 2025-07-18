@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+pnpm-lock.yaml
 
 # testing
 /coverage
@@ -15,6 +16,8 @@
 
 # production
 /build
+claude.md
+ipcrawler_summary.md
 
 # misc
 .DS_Store

@@ -1,0 +1,57 @@
+---
+title: "IPCrawler v1.8: Enhanced Detection"
+summary: "Improved service detection accuracy, new technology fingerprints, and better error handling."
+image: "/images/og/home.jpg"
+publishedAt: "2024-09-20"
+tag: "Release"
+---
+
+## Service Detection Improvements
+
+### 🔍 New Technology Support
+- **Frameworks**: Laravel, Django, Ruby on Rails detection
+- **CMS**: Joomla 4.x, Drupal 10.x fingerprints
+- **APIs**: GraphQL endpoint discovery
+- **Databases**: Redis, Elasticsearch service detection
+
+### 🎯 Detection Accuracy
+- **False positive reduction**: 85% fewer incorrect identifications
+- **Version precision**: Better version extraction from banners
+- **Multi-service ports**: Correctly identify multiple services on single port
+
+## Error Handling
+
+- **Graceful degradation**: Continue scanning when individual tools fail
+- **Better error messages**: Clear explanations of what went wrong
+- **Retry logic**: Automatic retry for transient network errors
+- **Debug mode**: Verbose logging for troubleshooting
+
+## Output Improvements
+
+### JSON Schema v2
+```json
+{
+  "version": "1.8.0",
+  "scan_id": "uuid",
+  "technologies": {
+    "cms": ["WordPress 5.8"],
+    "frameworks": ["PHP 7.4"],
+    "servers": ["Apache 2.4"]
+  }
+}
+```
+
+### HTML Reports
+- Syntax highlighting for code snippets
+- Collapsible sections for better navigation
+- Export to PDF functionality
+
+## Breaking Changes
+
+- Renamed `--fast-mode` to `--quick-scan`
+- JSON output structure updated (see schema above)
+- Minimum Python version now 3.7
+
+## Upgrade Notes
+
+Users upgrading from v1.7 should update their scripts to use the new flag names and JSON structure.

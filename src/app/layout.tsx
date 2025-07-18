@@ -29,6 +29,7 @@ export default async function RootLayout({
       as="html"
       lang="en"
       fillWidth
+      data-scroll-behavior="smooth"
       className={classNames(
         fonts.heading.variable,
         fonts.body.variable,

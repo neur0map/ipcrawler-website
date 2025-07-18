@@ -1,25 +1,25 @@
-import { Logo } from "@once-ui-system/core";
+// Logo import removed - not needed for IPCrawler
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "IPCrawler",
+  lastName: "",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Intelligent Wordlist Selection",
+  avatar: "/images/logo.png",
+  email: "ipcrawler@example.com",
+  location: "", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to SmartList Updates</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Get notified when SmartList adds new technology patterns, wordlist updates, and 
+      intelligence improvements that make recommendations even more accurate.
     </>
   ),
 };
@@ -30,17 +30,7 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://github.com/ipcrawler/ipcrawler",
   },
   {
     name: "Email",
@@ -53,18 +43,18 @@ const home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: `IPCrawler - ${person.role}`,
+  description: `Stop guessing which wordlists to use. IPCrawler's SmartList algorithm analyzes your target and recommends the perfect wordlists with confidence scores.`,
+  headline: <>Never Guess Wordlists Again.</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Introducing: <strong className="ml-4">SmartList - Know exactly which wordlists to use</strong></>,
+    href: "/work/smartlist-algorithm",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      IPCrawler's SmartList algorithm analyzes discovered services and recommends the <strong>exact wordlists</strong> you need.
+      <br /> No more blind enumeration. <strong>Technology-aware</strong>. <strong>Pattern-based</strong>. <strong>Find what matters</strong>.
     </>
   ),
 };
@@ -82,60 +72,60 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "What is SmartList?",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        SmartList is IPCrawler's intelligent algorithm that solves the biggest problem in enumeration: 
+        knowing which wordlists to use. By analyzing discovered services, technologies, and patterns, 
+        SmartList recommends the perfect wordlists with confidence scores, turning guesswork into science.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "The Wordlist Problem",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Traditional Enumeration",
+        timeframe: "Without SmartList",
+        role: "Blind guessing",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Thousands of wordlists available - which one to choose?
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Generic wordlists miss technology-specific paths
+          </>,
+          <>
+            Hours wasted on irrelevant requests that find nothing
+          </>,
+          <>
+            Critical vulnerabilities missed due to wrong wordlist selection
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "SmartList Intelligence",
+        timeframe: "With SmartList Algorithm",
+        role: "Precision targeting",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Detects WordPress? Get wp-plugins.txt, wp-themes.txt instantly
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Finds Tomcat? Recommends tomcat-manager.txt with high confidence
+          </>,
+          <>
+            Discovers API? Suggests api-endpoints.txt, graphql.txt
+          </>,
+          <>
+            Context-aware recommendations based on port, SSL, headers
           </>,
         ],
         images: [],
@@ -144,53 +134,43 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Who Benefits",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "CTF Players & HTB Users",
+        description: <>Get first blood by completing recon in 2 minutes while others are still running nmap.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Professional Pentesters",
+        description: <>Bill more hours on exploitation instead of enumeration. Generate client-ready reports instantly.</>,
+      },
+      {
+        name: "Security Researchers",
+        description: <>Find attack surfaces faster with intelligent tool chaining and technology-specific enumeration.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "SmartList Features",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Pattern Recognition",
+        description: <>SmartList uses intelligent pattern matching to identify technologies and recommend optimal wordlists.</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Technology Detection",
+        description: <>Recognizes 200+ technologies: WordPress, Joomla, Laravel, Spring Boot, Tomcat, and more.</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
+      },
+      {
+        title: "Confidence Scoring",
+        description: <>HIGH/MEDIUM/LOW confidence levels with clear reasoning for each recommendation.</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [],
       },
     ],
   },
@@ -198,71 +178,22 @@ const about = {
 
 const blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  label: "Changelog",
+  title: "IPCrawler Changelog",
+  description: `Release notes, updates, and version history for IPCrawler`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "SmartList",
+  title: `SmartList Algorithm – ${person.name}`,
+  description: `Explore how SmartList revolutionizes wordlist selection with intelligent technology detection`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
+// Gallery section removed as requested
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work };

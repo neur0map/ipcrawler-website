@@ -1,0 +1,73 @@
+---
+title: "HTTP Intelligence: SmartList's Best Friend"
+publishedAt: "2024-11-13"
+summary: "Advanced web service analysis that gives SmartList the technology fingerprints needed for pinpoint wordlist accuracy."
+images:
+  - "/images/projects/ipcrawler/http-scan.jpg"
+team:
+  - name: "IPCrawler"
+    role: "Technology Detection"
+    avatar: "/images/logo.png"
+---
+
+## Overview
+
+HTTP Intelligence is SmartList's most valuable data source. **When it detects WordPress, SmartList knows to recommend wp-plugins.txt. When it finds Laravel, SmartList suggests laravel-routes.txt.** Every CMS, framework, and technology detected becomes precise intelligence for perfect wordlist selection.
+
+## Key Features
+
+- **Technology Detection**: Identifies CMS, frameworks, servers, and languages
+- **Smart Directory Bruteforcing**: Context-aware wordlist selection
+- **Virtual Host Discovery**: Finds hidden vhosts and subdomains
+- **Security Header Analysis**: Evaluates defensive configurations
+
+## Multi-Tool Orchestration
+
+IPCrawler intelligently combines:
+- **WhatWeb**: Technology fingerprinting and version detection
+- **Gobuster**: High-performance directory and file discovery
+- **Curl**: Custom header analysis and response inspection
+- **DNSRecon**: Subdomain enumeration when applicable
+
+## Smart Enumeration Logic
+
+```python
+# Detected: WordPress on port 443
+# IPCrawler automatically selects:
+- /usr/share/seclists/Discovery/Web-Content/CMS/wordpress.txt
+- /usr/share/seclists/Discovery/Web-Content/CMS/wp-plugins.txt
+- Custom HTTPS-specific paths
+
+# Detected: Apache Tomcat
+# IPCrawler automatically selects:
+- /usr/share/seclists/Discovery/Web-Content/tomcat.txt
+- Java-specific endpoints
+- Management interface paths
+```
+
+## Advanced Detection Examples
+
+Real-world detection capabilities:
+- **WordPress**: Version, themes, plugins, users enumeration
+- **Joomla/Drupal**: Component discovery, version fingerprinting
+- **Custom Apps**: Framework detection (Laravel, Django, Spring)
+- **APIs**: Endpoint discovery, documentation URLs
+- **Admin Panels**: Common paths across technologies
+
+## Directory Discovery Strategy
+
+1. **Initial Fast Scan**: Common files and directories
+2. **Technology-Specific**: Based on detected stack
+3. **Deep Enumeration**: Extended wordlists for thorough coverage
+4. **Recursive Discovery**: Follow discovered directories
+
+## Security Intelligence
+
+- **Missing Headers**: Identifies absent security headers
+- **Information Disclosure**: Detects verbose errors, debug modes
+- **Misconfigurations**: Default pages, directory listings
+- **Vulnerable Components**: Known vulnerable versions
+
+## Outcome
+
+This phase transforms basic "port 80/443 open" information into a comprehensive web application attack surface map. In 1-3 minutes, you get intelligence that would typically require 30+ minutes of manual tool orchestration and result correlation.

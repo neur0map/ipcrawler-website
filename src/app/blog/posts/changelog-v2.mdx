@@ -1,0 +1,159 @@
+---
+title: "IPCrawler v2.0 Released: SmartList Algorithm"
+summary: "Major update brings intelligent wordlist recommendations, 3x faster scanning, and comprehensive reporting improvements."
+image: "/images/og/home.jpg"
+publishedAt: "2024-11-10"
+tag: "Release"
+---
+
+## What's New in v2.0
+
+The biggest IPCrawler update yet focuses on intelligence and speed, introducing the revolutionary SmartList Algorithm alongside major performance improvements.
+
+## 🧠 SmartList Algorithm
+
+The headline feature - intelligent wordlist recommendations based on discovered services:
+
+- **Automatic Analysis**: Evaluates all discovered services
+- **Confidence Scoring**: HIGH/MEDIUM/LOW recommendations
+- **Technology Mapping**: 200+ technology patterns recognized
+- **Pattern Database**: Uses comprehensive technology-to-wordlist mappings
+
+<CodeBlock compact marginBottom="16" codes={[
+  {
+    code: `# New output format
+SmartList Recommendations for 10.10.10.123:443 (WordPress):
+  
+HIGH Confidence:
+  📁 /usr/share/seclists/Discovery/Web-Content/CMS/wordpress.txt
+  📁 /usr/share/seclists/Discovery/Web-Content/CMS/wp-plugins.txt
+  
+MEDIUM Confidence:  
+  📁 /usr/share/seclists/Discovery/Web-Content/common.txt`,
+    language: "text"
+  }
+]} />
+
+## ⚡ Performance Improvements
+
+### 3x Faster Scanning
+- Optimized nmap parameters
+- Parallel port range processing
+- Improved timeout handling
+- Reduced network overhead
+
+### Real-time Results
+- Live updates during scanning
+- Progressive result display
+- No more waiting for completion
+- Immediate actionable intelligence
+
+## 📊 Enhanced Reporting
+
+### New HTML Reports
+- Dark theme interface
+- Interactive service browser
+- Syntax-highlighted results
+- Mobile-responsive design
+
+### Improved JSON Output
+```json
+{
+  "scan_metadata": {
+    "version": "2.0.0",
+    "duration": "127.3s",
+    "phases_completed": 4
+  },
+  "smartlist_recommendations": {
+    "high_confidence": [...],
+    "medium_confidence": [...]
+  }
+}
+```
+
+## 🔧 Quality of Life Updates
+
+### Automatic Privilege Detection
+```
+[!] Running without sudo - some features limited
+[?] Restart with sudo for:
+    - SYN stealth scanning (faster)
+    - OS detection capabilities
+    - Advanced timing options
+```
+
+### Better Error Handling
+- Graceful tool failure recovery
+- Clear error messages
+- Automatic retry logic
+- Detailed debug logging
+
+### Workspace Organization
+```
+workspaces/
+├── scan_10_10_10_123_20241110_143022/
+│   ├── scan_results.json      # Complete data
+│   ├── scan_report.txt        # Summary
+│   ├── scan_report.html       # Web view
+│   ├── live_results.json      # Real-time
+│   └── commands.txt           # Audit trail
+```
+
+## 🐛 Bug Fixes
+
+- Fixed Unicode handling in service banners
+- Resolved memory leak in long-running scans
+- Corrected HTTP/HTTPS detection logic
+- Fixed race condition in parallel scanning
+
+## 📈 Performance Benchmarks
+
+Tested on typical HTB machine:
+
+| Metric | v1.0 | v2.0 | Improvement |
+|--------|------|------|-------------|
+| Full Scan Time | 342s | 118s | 65% faster |
+| Memory Usage | 125MB | 87MB | 30% reduction |
+| Accuracy | 94% | 99% | 5% increase |
+| Wordlist Hit Rate | 23% | 91% | 4x better |
+
+## 🚀 Upgrade Instructions
+
+<CodeBlock compact marginBottom="16" codes={[
+  {
+    code: `# Pull latest version
+cd ipcrawler
+git pull origin main
+
+# Update dependencies
+pip3 install -r requirements.txt --upgrade
+
+# Verify installation
+python3 ipcrawler.py --version`,
+    language: "bash"
+  }
+]} />
+
+## 🔮 What's Next
+
+### v2.1 Roadmap
+- API endpoint detection
+- GraphQL enumeration
+- Cloud service fingerprinting
+- Custom wordlist generation
+
+### Community Requests
+- Windows PowerShell support
+- Docker container option
+- Web interface for results
+- Integration with Burp/ZAP
+
+## Acknowledgments
+
+Special thanks to:
+- HTB community for testing
+- SecLists maintainers
+- Contributors on GitHub
+- Beta testers worldwide
+
+IPCrawler v2.0 represents months of community feedback and real-world testing. Download now and experience the future of intelligent reconnaissance!

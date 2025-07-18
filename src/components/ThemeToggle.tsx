@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { Row, ToggleButton, useTheme } from '@once-ui-system/core';
+import React, { useEffect, useState, useRef } from 'react';
+import { ToggleButton, useTheme } from '@once-ui-system/core';
 
 export const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [currentTheme, setCurrentTheme] = useState('light');
+  const [isAnimating, setIsAnimating] = useState(false);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setMounted(true);
     setCurrentTheme(document.documentElement.getAttribute('data-theme') || 'light');
   }, []);
 
@@ -20,11 +20,36 @@ export const ThemeToggle: React.FC = () => {
   const icon = currentTheme === 'dark' ? 'light' : 'dark';
   const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
 
+  const handleThemeToggle = () => {
+    setIsAnimating(true);
+    
+    if (buttonRef.current) {
+      buttonRef.current.classList.add('animating');
+    }
+
+    setTimeout(() => {
+      setTheme(nextTheme);
+    }, 50);
+
+    setTimeout(() => {
+      setIsAnimating(false);
+      if (buttonRef.current) {
+        buttonRef.current.classList.remove('animating');
+      }
+    }, 300);
+  };
+
   return (
-    <ToggleButton
-      prefixIcon={icon}
-      onClick={() => setTheme(nextTheme)}
-      aria-label={`Switch to ${nextTheme} mode`}
-    />
+    <div 
+      ref={buttonRef}
+      className="theme-toggle-animation"
+    >
+      <ToggleButton
+        prefixIcon={icon}
+        onClick={handleThemeToggle}
+        aria-label={`Switch to ${nextTheme} mode`}
+        disabled={isAnimating}
+      />
+    </div>
   );
 };
