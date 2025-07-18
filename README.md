@@ -17,13 +17,14 @@
 ## 🎬 Demo Video
 
 <div align="center">
-  <video width="800" controls>
-    <source src="./public/videos/hero_video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
 
-*Watch IPCrawler's SmartList algorithm in action - intelligent wordlist selection based on discovered services*
+[![IPCrawler Demo](https://img.shields.io/badge/▶️_Watch_Demo-IPCrawler_in_Action-green?style=for-the-badge&logo=youtube)](./public/videos/hero_video.mp4)
+
+*Click to watch IPCrawler's SmartList algorithm in action - intelligent wordlist selection based on discovered services*
+
+> **Note**: To properly embed this video in GitHub, drag and drop the `public/videos/hero_video.mp4` file into a GitHub issue or comment, then copy the generated URL here.
+
+</div>
 
 ## 🎯 What is IPCrawler?
 
