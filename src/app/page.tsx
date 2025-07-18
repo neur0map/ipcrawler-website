@@ -82,8 +82,8 @@ export default function Home() {
           <div style={{
             position: 'relative',
             width: '100%',
-            maxWidth: '600px',
-            height: '350px',
+            maxWidth: '800px',
+            height: '450px',
             perspective: '1200px'
           }}>
             <video
@@ -95,6 +95,7 @@ export default function Home() {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                objectPosition: 'left center',
                 borderRadius: '20px',
                 transform: 'rotateY(-15deg) rotateX(5deg)',
                 transformStyle: 'preserve-3d',
@@ -109,8 +110,7 @@ export default function Home() {
                 filter: 'brightness(0.95) contrast(1.1)'
               }}
             >
-              <source src="/videos/hero_video.mov" type="video/mp4" />
-              <source src="/videos/hero_video.mov" type="video/quicktime" />
+              <source src="/videos/hero_video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             {/* Additional shadow layer for more depth */}
