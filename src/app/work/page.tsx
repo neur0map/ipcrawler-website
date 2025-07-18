@@ -87,9 +87,9 @@ export default function Documentation() {
       </Column>
 
       {/* Header Section */}
-      <RevealFx translateY="4">
+      <RevealFx translateY={4}>
         <Column gap="16" paddingBottom="32">
-          <RevealFx translateY="2" delay={0.05}>
+          <RevealFx translateY={2} delay={0.05}>
             <Flex gap="12" wrap>
               <Badge
                 background="brand-alpha-weak"
@@ -112,13 +112,13 @@ export default function Documentation() {
             </Flex>
           </RevealFx>
           
-          <RevealFx translateY="6" delay={0.1}>
+          <RevealFx translateY={6} delay={0.1}>
             <Heading variant="display-strong-s" wrap="balance">
               IPCrawler Documentation
             </Heading>
           </RevealFx>
           
-          <RevealFx translateY="8" delay={0.15}>
+          <RevealFx translateY={8} delay={0.15}>
             <Text variant="heading-default-m" onBackground="neutral-weak" wrap="balance">
               Complete guide to intelligent network reconnaissance with SmartList wordlist recommendations
             </Text>
@@ -127,7 +127,7 @@ export default function Documentation() {
       </RevealFx>
 
       {/* Getting Started Section */}
-      <RevealFx translateY="8" delay={0.1}>
+      <RevealFx translateY={8} delay={0.1}>
         <Column id="Getting Started" gap="24" paddingBottom="48">
           <Heading as="h2" variant="heading-strong-l">
             Getting Started
@@ -138,7 +138,7 @@ export default function Documentation() {
           </Text>
 
           {/* Installation */}
-          <RevealFx translateY="4" delay={0.05}>
+          <RevealFx translateY={4} delay={0.05}>
             <Column id="Installation" gap="16">
               <Heading as="h3" variant="heading-strong-m">
                 Installation
@@ -172,7 +172,7 @@ python3 ipcrawler.py --version`,
           </RevealFx>
 
           {/* Quick Start */}
-          <RevealFx translateY="4" delay={0.1}>
+          <RevealFx translateY={4} delay={0.1}>
             <Column id="Quick Start" gap="16">
               <Heading as="h3" variant="heading-strong-m">
                 Quick Start
@@ -236,7 +236,7 @@ python3 ipcrawler.py target.com --output /path/to/results`,
       </RevealFx>
 
       {/* SmartList Algorithm Section */}
-      <RevealFx translateY="8" delay={0.2}>
+      <RevealFx translateY={8} delay={0.2}>
         <Column id="SmartList Algorithm" gap="24" paddingBottom="48">
           <Heading as="h2" variant="heading-strong-l">
             SmartList Algorithm
@@ -258,11 +258,11 @@ python3 ipcrawler.py target.com --output /path/to/results`,
             </Text>
             
             <Flex direction="column" gap="16" paddingLeft="16">
-              <RevealFx translateY="3" delay={0.05}>
+              <RevealFx translateY={3} delay={0.05}>
                 <Flex gap="12" vertical="start">
                   <Badge
                     background="brand-alpha-weak"
-                    paddingX="6"
+                    paddingX="8"
                     paddingY="2"
                     onBackground="brand-strong"
                     textVariant="label-default-xs"
@@ -275,11 +275,11 @@ python3 ipcrawler.py target.com --output /path/to/results`,
                 </Flex>
               </RevealFx>
               
-              <RevealFx translateY="3" delay={0.1}>
+              <RevealFx translateY={3} delay={0.1}>
                 <Flex gap="12" vertical="start">
                   <Badge
                     background="brand-alpha-weak"
-                    paddingX="6"
+                    paddingX="8"
                     paddingY="2"
                     onBackground="brand-strong"
                     textVariant="label-default-xs"
@@ -292,11 +292,11 @@ python3 ipcrawler.py target.com --output /path/to/results`,
                 </Flex>
               </RevealFx>
               
-              <RevealFx translateY="3" delay={0.15}>
+              <RevealFx translateY={3} delay={0.15}>
                 <Flex gap="12" vertical="start">
                   <Badge
                     background="brand-alpha-weak"
-                    paddingX="6"
+                    paddingX="8"
                     paddingY="2"
                     onBackground="brand-strong"
                     textVariant="label-default-xs"
@@ -309,11 +309,11 @@ python3 ipcrawler.py target.com --output /path/to/results`,
                 </Flex>
               </RevealFx>
               
-              <RevealFx translateY="3" delay={0.2}>
+              <RevealFx translateY={3} delay={0.2}>
                 <Flex gap="12" vertical="start">
                   <Badge
                     background="brand-alpha-weak"
-                    paddingX="6"
+                    paddingX="8"
                     paddingY="2"
                     onBackground="brand-strong"
                     textVariant="label-default-xs"
@@ -326,11 +326,11 @@ python3 ipcrawler.py target.com --output /path/to/results`,
                 </Flex>
               </RevealFx>
               
-              <RevealFx translateY="3" delay={0.25}>
+              <RevealFx translateY={3} delay={0.25}>
                 <Flex gap="12" vertical="start">
                   <Badge
                     background="brand-alpha-weak"
-                    paddingX="6"
+                    paddingX="8"
                     paddingY="2"
                     onBackground="brand-strong"
                     textVariant="label-default-xs"
@@ -402,7 +402,7 @@ recommended over generic web content lists.`,
       </RevealFx>
 
       {/* Usage Examples Section */}
-      <RevealFx translateY="8" delay={0.3}>
+      <RevealFx translateY={8} delay={0.3}>
         <Column id="Usage Examples" gap="24" paddingBottom="48">
           <Heading as="h2" variant="heading-strong-l">
             Usage Examples
@@ -491,7 +491,7 @@ python3 ipcrawler.py target.com --json-only`,
       </RevealFx>
 
       {/* API Reference Section */}
-      <RevealFx translateY="8" delay={0.4}>
+      <RevealFx translateY={8} delay={0.4}>
         <Column id="API Reference" gap="24" paddingBottom="48">
           <Heading as="h2" variant="heading-strong-l">
             API Reference
@@ -607,7 +607,7 @@ Options:
       </RevealFx>
 
       {/* Troubleshooting Section */}
-      <RevealFx translateY="8" delay={0.5}>
+      <RevealFx translateY={8} delay={0.5}>
         <Column id="Troubleshooting" gap="24" paddingBottom="48">
           <Heading as="h2" variant="heading-strong-l">
             Troubleshooting
@@ -622,7 +622,7 @@ Options:
             <Flex direction="column" gap="16">
               <Column gap="8">
                 <Text variant="body-strong-m" onBackground="neutral-strong">
-                  "Permission denied" errors
+                  &quot;Permission denied&quot; errors
                 </Text>
                 <Text variant="body-default-m" onBackground="neutral-medium">
                   Run with sudo for enhanced scanning capabilities:
@@ -643,7 +643,7 @@ Options:
               
               <Column gap="8">
                 <Text variant="body-strong-m" onBackground="neutral-strong">
-                  "Command not found" errors
+                  &quot;Command not found&quot; errors
                 </Text>
                 <Text variant="body-default-m" onBackground="neutral-medium">
                   Install missing dependencies:
@@ -724,7 +724,7 @@ brew install nmap gobuster curl`,
       </RevealFx>
 
       {/* Footer CTA */}
-      <RevealFx translateY="12" delay={0.6}>
+      <RevealFx translateY={12} delay={0.6}>
         <Column gap="24" paddingY="32" horizontal="center" style={{ textAlign: 'center' }}>
           <Heading variant="heading-strong-l">
             Ready to get started?

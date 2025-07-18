@@ -53,7 +53,7 @@ const home = {
   },
   subline: (
     <>
-      IPCrawler's SmartList algorithm analyzes discovered services and recommends the <strong>exact wordlists</strong> you need.
+      IPCrawler&apos;s SmartList algorithm analyzes discovered services and recommends the <strong>exact wordlists</strong> you need.
       <br /> No more blind enumeration. <strong>Technology-aware</strong>. <strong>Pattern-based</strong>. <strong>Find what matters</strong>.
     </>
   ),
@@ -80,7 +80,7 @@ const about = {
     title: "What is SmartList?",
     description: (
       <>
-        SmartList is IPCrawler's smart feature that automatically picks the right wordlists for you. 
+        SmartList is IPCrawler&apos;s smart feature that automatically picks the right wordlists for you. 
         Instead of guessing which lists to use, SmartList looks at what services are running 
         (like WordPress, Apache, etc.) and suggests the best wordlists that are most likely to find something useful. 
         Think of it as having an expert guide that knows exactly which tools to use for each situation.
@@ -126,7 +126,7 @@ const about = {
             Running an API? SmartList knows which endpoint lists to use
           </>,
           <>
-            Always get the most relevant wordlists for what you're scanning
+            Always get the most relevant wordlists for what you&apos;re scanning
           </>,
         ],
         images: [],
