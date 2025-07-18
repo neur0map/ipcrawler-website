@@ -18,11 +18,9 @@
 
 <div align="center">
 
-[![IPCrawler Demo](https://img.shields.io/badge/▶️_Watch_Demo-IPCrawler_in_Action-green?style=for-the-badge&logo=youtube)](./public/videos/hero_video.mp4)
+https://github.com/user-attachments/assets/5112ecd8-d721-4dce-8f86-f3f2effc451c
 
-*Click to watch IPCrawler's SmartList algorithm in action - intelligent wordlist selection based on discovered services*
-
-> **Note**: To properly embed this video in GitHub, drag and drop the `public/videos/hero_video.mp4` file into a GitHub issue or comment, then copy the generated URL here.
+*Watch IPCrawler's SmartList algorithm in action - intelligent wordlist selection based on discovered services*
 
 </div>
 
