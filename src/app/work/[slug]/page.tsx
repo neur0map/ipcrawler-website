@@ -7,7 +7,7 @@ import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "work", "projects"]);
+  const posts = getPosts(["src", "app", "work", "documentation"]);
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -21,7 +21,7 @@ export async function generateMetadata({
   const routeParams = await params;
   const slugPath = Array.isArray(routeParams.slug) ? routeParams.slug.join('/') : routeParams.slug || '';
 
-  const posts = getPosts(["src", "app", "work", "projects"])
+  const posts = getPosts(["src", "app", "work", "documentation"])
   let post = posts.find((post) => post.slug === slugPath);
 
   if (!post) return {};
@@ -35,13 +35,13 @@ export async function generateMetadata({
   });
 }
 
-export default async function Project({
+export default async function DocumentationPage({
   params
 }: { params: Promise<{ slug: string | string[] }> }) {
   const routeParams = await params;
   const slugPath = Array.isArray(routeParams.slug) ? routeParams.slug.join('/') : routeParams.slug || '';
 
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slugPath);
+  let post = getPosts(["src", "app", "work", "documentation"]).find((post) => post.slug === slugPath);
 
   if (!post) {
     notFound();
@@ -71,7 +71,7 @@ export default async function Project({
       />
       <Column maxWidth="xs" gap="16">
         <Button data-border="rounded" href="/work" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
-          Projects
+          Documentation
         </Button>
         <Heading variant="display-strong-s">{post.metadata.title}</Heading>
       </Column>

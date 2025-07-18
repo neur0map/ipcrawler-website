@@ -160,7 +160,7 @@ export default function Blog() {
           </Column>
           <Column gap="4" horizontal="center">
             <Text variant="display-strong-xs">
-              v2.0
+              v0.1.0-alpha
             </Text>
             <Text variant="label-default-s" onBackground="neutral-weak">
               Latest

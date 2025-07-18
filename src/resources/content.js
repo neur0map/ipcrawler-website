@@ -30,12 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/ipcrawler/ipcrawler",
+    link: "https://github.com/neur0map",
   },
   {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
+    name: "X",
+    icon: "x",
+    link: "https://x.com/neur0map",
   },
 ];
 
@@ -80,9 +80,10 @@ const about = {
     title: "What is SmartList?",
     description: (
       <>
-        SmartList is IPCrawler's intelligent algorithm that solves the biggest problem in enumeration: 
-        knowing which wordlists to use. By analyzing discovered services, technologies, and patterns, 
-        SmartList recommends the perfect wordlists with confidence scores, turning guesswork into science.
+        SmartList is IPCrawler's smart feature that automatically picks the right wordlists for you. 
+        Instead of guessing which lists to use, SmartList looks at what services are running 
+        (like WordPress, Apache, etc.) and suggests the best wordlists that are most likely to find something useful. 
+        Think of it as having an expert guide that knows exactly which tools to use for each situation.
       </>
     ),
   },
@@ -91,41 +92,41 @@ const about = {
     title: "The Wordlist Problem",
     experiences: [
       {
-        company: "Traditional Enumeration",
-        timeframe: "Without SmartList",
-        role: "Blind guessing",
+        company: "Without SmartList",
+        timeframe: "The Old Way",
+        role: "Manual guessing",
         achievements: [
           <>
-            Thousands of wordlists available - which one to choose?
+            Hundreds of wordlists to choose from - but which ones work?
           </>,
           <>
-            Generic wordlists miss technology-specific paths
+            Using general lists that miss specific application paths
           </>,
           <>
-            Hours wasted on irrelevant requests that find nothing
+            Wasting time scanning with irrelevant wordlists
           </>,
           <>
-            Critical vulnerabilities missed due to wrong wordlist selection
+            Missing important findings because you used the wrong lists
           </>,
         ],
         images: [],
       },
       {
-        company: "SmartList Intelligence",
-        timeframe: "With SmartList Algorithm",
-        role: "Precision targeting",
+        company: "With SmartList",
+        timeframe: "The Smart Way",
+        role: "Intelligent recommendations",
         achievements: [
           <>
-            Detects WordPress? Get wp-plugins.txt, wp-themes.txt instantly
+            Found WordPress? SmartList suggests WordPress-specific lists automatically
           </>,
           <>
-            Finds Tomcat? Recommends tomcat-manager.txt with high confidence
+            Discovered a database? Get database admin panel wordlists instantly
           </>,
           <>
-            Discovers API? Suggests api-endpoints.txt, graphql.txt
+            Running an API? SmartList knows which endpoint lists to use
           </>,
           <>
-            Context-aware recommendations based on port, SSL, headers
+            Always get the most relevant wordlists for what you're scanning
           </>,
         ],
         images: [],
@@ -152,23 +153,23 @@ const about = {
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "SmartList Features",
+    title: "How SmartList Works",
     skills: [
       {
-        title: "Pattern Recognition",
-        description: <>SmartList uses intelligent pattern matching to identify technologies and recommend optimal wordlists.</>,
+        title: "Automatic Detection",
+        description: <>SmartList scans your target and automatically identifies what software is running (WordPress, databases, web servers, etc.).</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
-        title: "Technology Detection",
-        description: <>Recognizes 200+ technologies: WordPress, Joomla, Laravel, Spring Boot, Tomcat, and more.</>,
+        title: "Smart Matching",
+        description: <>Based on what it finds, SmartList matches each service to the best wordlists that are most likely to discover useful paths.</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
-        title: "Confidence Scoring",
-        description: <>HIGH/MEDIUM/LOW confidence levels with clear reasoning for each recommendation.</>,
+        title: "Confidence Ratings",
+        description: <>Each recommendation gets a confidence rating (HIGH/MEDIUM/LOW) so you know which wordlists are most promising to try first.</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
@@ -187,11 +188,11 @@ const blog = {
 
 const work = {
   path: "/work",
-  label: "SmartList",
-  title: `SmartList Algorithm – ${person.name}`,
-  description: `Explore how SmartList revolutionizes wordlist selection with intelligent technology detection`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Docs",
+  title: `Documentation – ${person.name}`,
+  description: `Complete guide to IPCrawler installation, usage, and SmartList algorithm`,
+  // Create new documentation pages by adding a new .mdx file to app/work/documentation
+  // All documentation pages will be listed on the /home and /work routes
 };
 
 // Gallery section removed as requested

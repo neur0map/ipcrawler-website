@@ -3,7 +3,6 @@ import React from "react";
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Schema, CodeBlock } from "@once-ui-system/core";
 import { home, about, person, newsletter, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
 export default function Home() {
@@ -24,57 +23,112 @@ export default function Home() {
       />
       
       {/* Hero Section */}
-      <Column fillWidth paddingY="24" gap="m" horizontal="center">
-        {home.featured.display && (
-          <RevealFx fillWidth horizontal="center" paddingBottom="24">
-            <Badge 
-              background="brand-alpha-weak" 
-              paddingX="12" 
-              paddingY="4" 
-              onBackground="brand-strong" 
-              textVariant="label-default-s" 
-              arrow={false}
-              href={home.featured.href}>
-              <Row paddingY="2">{home.featured.title}</Row>
-            </Badge>
+      <Flex fillWidth paddingY="24" gap="xl" mobileDirection="column">
+        {/* Left side - Text content */}
+        <Column flex={3} gap="m" horizontal="start">
+          {home.featured.display && (
+            <RevealFx fillWidth horizontal="start" paddingBottom="24">
+              <Badge 
+                background="brand-alpha-weak" 
+                paddingX="12" 
+                paddingY="4" 
+                onBackground="brand-strong" 
+                textVariant="label-default-s" 
+                arrow={false}
+                href={home.featured.href}>
+                <Row paddingY="2">{home.featured.title}</Row>
+              </Badge>
+            </RevealFx>
+          )}
+          
+          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16">
+            <Heading wrap="balance" variant="display-strong-l">
+              {home.headline}
+            </Heading>
           </RevealFx>
-        )}
-        
-        <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16">
-          <Heading wrap="balance" variant="display-strong-l">
-            {home.headline}
-          </Heading>
+          
+          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="32">
+            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-l">
+              {home.subline}
+            </Text>
+          </RevealFx>
+          
+          <RevealFx delay={0.4} horizontal="start">
+            <Button
+              id="about"
+              data-border="rounded"
+              href={about.path}
+              variant="secondary"
+              size="l"
+              weight="default"
+              arrowIcon>
+              <Flex gap="8" vertical="center" paddingRight="4">
+                {about.avatar.display && (
+                  <Avatar
+                    marginRight="8"
+                    style={{ marginLeft: "-0.75rem" }}
+                    src={person.avatar}
+                    size="m"
+                  />
+                )}
+                Learn About SmartList
+              </Flex>
+            </Button>
+          </RevealFx>
+        </Column>
+
+        {/* Right side - Video */}
+        <RevealFx translateY="8" delay={0.3} flex={2} horizontal="center">
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            maxWidth: '600px',
+            height: '350px',
+            perspective: '1200px'
+          }}>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: '20px',
+                transform: 'rotateY(-15deg) rotateX(5deg)',
+                transformStyle: 'preserve-3d',
+                boxShadow: `
+                  0 25px 80px rgba(0, 0, 0, 0.4),
+                  0 15px 40px rgba(0, 0, 0, 0.3),
+                  0 5px 20px rgba(0, 0, 0, 0.2),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.1)
+                `,
+                border: '1px solid var(--neutral-alpha-weak)',
+                opacity: '0.9',
+                filter: 'brightness(0.95) contrast(1.1)'
+              }}
+            >
+              <source src="/videos/hero_video.mov" type="video/mp4" />
+              <source src="/videos/hero_video.mov" type="video/quicktime" />
+              Your browser does not support the video tag.
+            </video>
+            {/* Additional shadow layer for more depth */}
+            <div style={{
+              position: 'absolute',
+              top: '30px',
+              left: '30px',
+              right: '-30px',
+              bottom: '-30px',
+              background: 'linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1))',
+              borderRadius: '20px',
+              zIndex: -1,
+              transform: 'rotateY(-15deg) rotateX(5deg)',
+              filter: 'blur(20px)'
+            }} />
+          </div>
         </RevealFx>
-        
-        <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="32">
-          <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-l">
-            {home.subline}
-          </Text>
-        </RevealFx>
-        
-        <RevealFx delay={0.4} horizontal="start">
-          <Button
-            id="about"
-            data-border="rounded"
-            href={about.path}
-            variant="secondary"
-            size="l"
-            weight="default"
-            arrowIcon>
-            <Flex gap="8" vertical="center" paddingRight="4">
-              {about.avatar.display && (
-                <Avatar
-                  marginRight="8"
-                  style={{ marginLeft: "-0.75rem" }}
-                  src={person.avatar}
-                  size="m"
-                />
-              )}
-              Learn About SmartList
-            </Flex>
-          </Button>
-        </RevealFx>
-      </Column>
+      </Flex>
 
       {/* Installation */}
       <RevealFx translateY="12" delay={0.5}>
@@ -89,7 +143,7 @@ export default function Home() {
 git clone https://github.com/neur0map/ipcrawler.git
 cd ipcrawler
 make install`,
-                language: "bash",
+                language: "shell",
                 label: "Installation"
               }
             ]}
@@ -98,10 +152,6 @@ make install`,
         </Column>
       </RevealFx>
 
-      {/* Featured SmartList */}
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx>
 
       {/* Recent Updates */}
       {routes["/blog"] && (

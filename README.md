@@ -1,94 +1,116 @@
-# **Magic Portfolio by Once UI**
+# IPCrawler Website
 
-View the [demo here](https://demo.magic-portfolio.com).
+The official website for IPCrawler - an intelligent network reconnaissance orchestrator with SmartList wordlist recommendations.
 
-![Magic Portfolio](https://demo.magic-portfolio.com/images/og/home.jpg)
+![IPCrawler](public/images/og/home.jpg)
 
+## Overview
 
-# **Getting started**
+This website showcases IPCrawler's breakthrough SmartList algorithm that eliminates wordlist guesswork through intelligent pattern matching and technology detection.
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+## Features
 
-**1. Clone the repository**
+- **Modern Design**: Built with Next.js and Once UI design system
+- **Dark Theme**: Terminal-inspired aesthetic with green/cyan accents
+- **Interactive Documentation**: Comprehensive guide with code examples
+- **Changelog Timeline**: Beautiful version history display
+- **Responsive**: Optimized for all screen sizes
+- **Fast**: Built with performance in mind
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js v18.17+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/neur0map/ipcrawler-website.git
+cd ipcrawler-website
 ```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
 
-**2. Install dependencies**
-```
+2. Install dependencies
+```bash
 npm install
 ```
 
-**3. Run dev server**
-```
+3. Run development server
+```bash
 npm run dev
 ```
 
-**4. Edit config**
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Project Structure
+
 ```
-src/app/resources/config
+src/
+├── app/           # Next.js app directory
+│   ├── about/     # About page
+│   ├── blog/      # Changelog page
+│   ├── work/      # Documentation page
+│   └── page.tsx   # Homepage
+├── components/    # React components
+├── resources/     # Content and configuration
+│   ├── content.js # Site content
+│   └── once-ui.config.js # Theme configuration
+└── styles/        # CSS modules
 ```
 
-**5. Edit content**
+## Configuration
+
+### Content
+
+Edit `src/resources/content.js` to update:
+- Site metadata
+- Navigation labels
+- Page content
+- Social links
+
+### Theme
+
+Edit `src/resources/once-ui.config.js` to customize:
+- Color scheme
+- Typography
+- Effects
+- Layout options
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Deploy with default settings
+
+### Other Platforms
+
+Build for production:
+```bash
+npm run build
 ```
-src/app/resources/content
-```
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
+The output will be in the `.next` directory.
 
-# **Documentation**
+## License
 
-Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-# **Features**
+## Links
 
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
+- [IPCrawler Repository](https://github.com/neur0map/ipcrawler)
+- [Live Website](https://ipcrawler.io)
+- [Documentation](https://ipcrawler.io/work)
 
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+## Contributing
 
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+## Support
 
-## **Localization**
-- A localized version of Magic Portfolio is available with the next-intl library
-- To use localization, switch to the 'i18n' branch
-
-# **Authors**
-
-Connect with us on Threads or LinkedIn.
-
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
-
-Localization added by [François Hernandez](https://github.com/francoishernandez)
-
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-- You can extend the license to commercial use by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+For issues related to:
+- IPCrawler tool: [Create an issue](https://github.com/neur0map/ipcrawler/issues)
+- Website: [Create an issue](https://github.com/neur0map/ipcrawler-website/issues)

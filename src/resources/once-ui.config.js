@@ -17,11 +17,8 @@ const display = {
   themeSwitcher: true
 };
 
-// Enable password protection on selected routes
-// Set password in the .env file, refer to .env.example
-const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
-};
+// No protected routes needed for IPCrawler website
+const protectedRoutes = {};
 
 // Import and set font for each variant
 import { Geist } from "next/font/google";
@@ -182,7 +179,8 @@ const schema = {
 
 // social links
 const sameAs = {
-  github: "https://github.com/ipcrawler/ipcrawler",
+  github: "https://github.com/neur0map",
+  x: "https://x.com/neur0map",
 };
 
 export { display, mailchimp, routes, protectedRoutes, baseURL, fonts, style, schema, sameAs, effects, dataStyle };

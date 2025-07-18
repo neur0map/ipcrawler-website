@@ -1,0 +1,75 @@
+---
+title: "IPCrawler v0.1.0-alpha: Initial Release"
+summary: "First alpha release featuring the SmartList algorithm for intelligent wordlist recommendations."
+image: "/images/og/home.jpg"
+publishedAt: "2024-12-01"
+tag: "Alpha"
+---
+
+## IPCrawler v0.1.0-alpha
+
+Welcome to the first alpha release of IPCrawler! This early version introduces our core concept: intelligent wordlist selection that saves time and improves results.
+
+## 🧠 SmartList Algorithm (Alpha)
+
+Our main feature that makes IPCrawler different:
+
+<CodeBlock codes={[
+  {
+    code: `# Example: SmartList finds WordPress and recommends specific wordlists
+SmartList Recommendations for target.com:443 (WordPress detected):
+
+HIGH Confidence:
+  📁 wordpress-plugins.txt  
+  📁 wp-admin-panels.txt
+  
+MEDIUM Confidence:  
+  📁 common-web-dirs.txt`,
+    language: "plaintext"
+  }
+]} />
+
+**What SmartList does:**
+- Analyzes discovered services (web servers, databases, etc.)
+- Matches technologies to specialized wordlists  
+- Provides confidence ratings (HIGH/MEDIUM/LOW)
+- Eliminates guesswork in wordlist selection
+
+## ⚙️ Core Features
+
+- **Port Scanning**: Fast discovery of open services
+- **Service Detection**: Identifies running applications  
+- **Smart Recommendations**: Technology-aware wordlist suggestions
+- **Simple Reports**: Easy-to-read scan results
+
+## 🚧 Alpha Limitations
+
+This is an early alpha release with basic functionality:
+- Limited wordlist database
+- Basic reporting format
+- Command-line interface only
+- Minimal error handling
+
+## Installation
+
+<CodeBlock codes={[
+  {
+    code: `# Clone and install IPCrawler
+git clone https://github.com/neur0map/ipcrawler.git
+cd ipcrawler
+make install`,
+    language: "shell"
+  }
+]} />
+
+## What's Next
+
+Future development will focus on:
+- Expanding the SmartList technology database
+- Web interface development
+- Enhanced reporting capabilities
+- Performance optimizations
+
+---
+
+*This is alpha software under active development. Expect bugs and breaking changes.*

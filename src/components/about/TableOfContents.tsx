@@ -53,13 +53,13 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
           <Column key={sectionIndex} gap="12">
             <Flex
               cursor="interactive"
-              className={styles.hover}
+              className={`${styles.hover} hover:translate-x-1 transition-all duration-200 hover:scale-105`}
               gap="8"
               vertical="center"
               onClick={() => scrollTo(section.title, 80)}
             >
-              <Flex height="1" minWidth="16" background="neutral-strong"></Flex>
-              <Text>{section.title}</Text>
+              <Flex height="1" minWidth="16" background="neutral-strong" className="transition-all duration-200 hover:bg-brand-strong"></Flex>
+              <Text className="transition-colors duration-200 hover:text-brand-strong">{section.title}</Text>
             </Flex>
             {about.tableOfContent.subItems && (
               <>
@@ -68,14 +68,14 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                     hide="l"
                     key={itemIndex}
                     style={{ cursor: "pointer" }}
-                    className={styles.hover}
+                    className={`${styles.hover} hover:translate-x-1 transition-all duration-200 hover:scale-105`}
                     gap="12"
                     paddingLeft="24"
                     vertical="center"
                     onClick={() => scrollTo(item, 80)}
                   >
-                    <Flex height="1" minWidth="8" background="neutral-strong"></Flex>
-                    <Text>{item}</Text>
+                    <Flex height="1" minWidth="8" background="neutral-strong" className="transition-all duration-200 hover:bg-brand-strong"></Flex>
+                    <Text className="transition-colors duration-200 hover:text-brand-strong">{item}</Text>
                   </Flex>
                 ))}
               </>
