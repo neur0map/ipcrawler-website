@@ -13,6 +13,19 @@ const nextConfig = {
     compiler: "modern",
     silenceDeprecations: ["legacy-js-api"],
   },
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 export default withMDX(nextConfig);

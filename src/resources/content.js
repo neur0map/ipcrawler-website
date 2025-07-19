@@ -41,20 +41,20 @@ const social = [
 
 const home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/og.png",
   label: "Home",
   title: `IPCrawler - ${person.role}`,
-  description: `Stop guessing which wordlists to use. IPCrawler's SmartList algorithm analyzes your target and recommends the perfect wordlists with confidence scores.`,
-  headline: <>Never Guess Wordlists Again.</>,
+  description: `Stop guessing which wordlists to use in Hack The Box. IPCrawler's SmartList algorithm analyzes your target and recommends the perfect wordlists with confidence scores for faster enumeration.`,
+  headline: <>Never Guess Wordlists Again in HTB.</>,
   featured: {
     display: true,
-    title: <>Introducing: <strong className="ml-4">SmartList - Know exactly which wordlists to use</strong></>,
+    title: <>Introducing: <strong className="ml-4">SmartList - Know exactly which wordlists to use in Hack The Box</strong></>,
     href: "/work/smartlist-algorithm",
   },
   subline: (
     <>
-      IPCrawler&apos;s SmartList algorithm analyzes discovered services and recommends the <strong>exact wordlists</strong> you need.
-      <br /> No more blind enumeration. <strong>Technology-aware</strong>. <strong>Pattern-based</strong>. <strong>Find what matters</strong>.
+      IPCrawler&apos;s SmartList algorithm analyzes discovered services and recommends the <strong>exact wordlists</strong> you need for Hack The Box challenges.
+      <br /> No more blind enumeration. <strong>Technology-aware</strong>. <strong>HTB-optimized</strong>. <strong>Find hidden directories faster</strong>.
     </>
   ),
 };
@@ -80,10 +80,10 @@ const about = {
     title: "What is SmartList?",
     description: (
       <>
-        SmartList is IPCrawler&apos;s smart feature that automatically picks the right wordlists for you. 
-        Instead of guessing which lists to use, SmartList looks at what services are running 
-        (like WordPress, Apache, etc.) and suggests the best wordlists that are most likely to find something useful. 
-        Think of it as having an expert guide that knows exactly which tools to use for each situation.
+        SmartList is IPCrawler&apos;s smart feature that automatically picks the right wordlists for Hack The Box challenges. 
+        Instead of wasting time with generic wordlists, SmartList analyzes discovered services 
+        (like WordPress, Apache, databases, etc.) and suggests HTB-optimized wordlists that are most likely to find hidden directories. 
+        Think of it as having an expert HTB player guide that knows exactly which wordlists lead to first blood.
       </>
     ),
   },
@@ -93,40 +93,40 @@ const about = {
     experiences: [
       {
         company: "Without SmartList",
-        timeframe: "The Old Way",
-        role: "Manual guessing",
+        timeframe: "The Old HTB Way",
+        role: "Manual wordlist guessing",
         achievements: [
           <>
-            Hundreds of wordlists to choose from - but which ones work?
+            Hours wasted running dirbuster with generic wordlists on HTB boxes
           </>,
           <>
-            Using general lists that miss specific application paths
+            Missing obvious admin panels because you chose the wrong wordlist
           </>,
           <>
-            Wasting time scanning with irrelevant wordlists
+            Watching others get first blood while you&apos;re still enumerating
           </>,
           <>
-            Missing important findings because you used the wrong lists
+            Frustration when the right directory was in a wordlist you didn&apos;t try
           </>,
         ],
         images: [],
       },
       {
         company: "With SmartList",
-        timeframe: "The Smart Way",
-        role: "Intelligent recommendations",
+        timeframe: "The HTB Smart Way",
+        role: "Intelligent HTB enumeration",
         achievements: [
           <>
-            Found WordPress? SmartList suggests WordPress-specific lists automatically
+            Found WordPress on HTB box? SmartList suggests wp-admin wordlists automatically
           </>,
           <>
-            Discovered a database? Get database admin panel wordlists instantly
+            Discovered MySQL? Get database-specific admin panel wordlists instantly
           </>,
           <>
-            Running an API? SmartList knows which endpoint lists to use
+            API endpoints detected? SmartList knows which REST/GraphQL lists work
           </>,
           <>
-            Always get the most relevant wordlists for what you&apos;re scanning
+            Always use the wordlists that HTB box creators actually hide directories in
           </>,
         ],
         images: [],
@@ -138,16 +138,16 @@ const about = {
     title: "Who Benefits",
     institutions: [
       {
-        name: "CTF Players & HTB Users",
-        description: <>Get first blood by completing recon in 2 minutes while others are still running nmap.</>,
+        name: "Hack The Box Players",
+        description: <>Get first blood by finding hidden directories in minutes while others waste hours with wrong wordlists.</>,
       },
       {
         name: "Professional Pentesters",
-        description: <>Bill more hours on exploitation instead of enumeration. Generate client-ready reports instantly.</>,
+        description: <>Stop wasting client time on manual wordlist selection. Use HTB-proven techniques in real engagements.</>,
       },
       {
-        name: "Security Researchers",
-        description: <>Find attack surfaces faster with intelligent tool chaining and technology-specific enumeration.</>,
+        name: "CTF Players & Security Researchers",
+        description: <>Apply HTB-optimized enumeration techniques to find attack surfaces in real-world scenarios faster.</>,
       },
     ],
   },
@@ -156,20 +156,20 @@ const about = {
     title: "How SmartList Works",
     skills: [
       {
-        title: "Automatic Detection",
-        description: <>SmartList scans your target and automatically identifies what software is running (WordPress, databases, web servers, etc.).</>,
+        title: "HTB-Optimized Detection",
+        description: <>SmartList analyzes HTB targets and automatically identifies technologies (WordPress, MySQL, Apache, custom apps, etc.) commonly found in boxes.</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
-        title: "Smart Matching",
-        description: <>Based on what it finds, SmartList matches each service to the best wordlists that are most likely to discover useful paths.</>,
+        title: "HTB-Proven Wordlist Matching",
+        description: <>Based on detected services, SmartList recommends wordlists that HTB creators actually use to hide directories and files in their boxes.</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
-        title: "Confidence Ratings",
-        description: <>Each recommendation gets a confidence rating (HIGH/MEDIUM/LOW) so you know which wordlists are most promising to try first.</>,
+        title: "First Blood Priority",
+        description: <>Each wordlist gets a confidence rating (HIGH/MEDIUM/LOW) based on HTB success rates, so you know which ones to run first for fastest results.</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
@@ -179,9 +179,9 @@ const about = {
 
 const blog = {
   path: "/blog",
-  label: "Changelog",
-  title: "IPCrawler Changelog",
-  description: `Release notes, updates, and version history for IPCrawler`,
+  label: "Blog",
+  title: "IPCrawler Blog - HTB Tips & SmartList Updates",
+  description: `Hack The Box enumeration techniques, wordlist selection tips, and IPCrawler release notes for faster directory discovery`,
   // Add blog posts as .mdx files in app/blog/posts
   // All posts will be listed on the /blog route
 };

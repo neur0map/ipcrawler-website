@@ -26,7 +26,17 @@ export const Footer = () => {
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
-            / Built with Next.js
+            / Built with{" "}
+            <Text
+              as="a"
+              href="https://once-ui.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onBackground="neutral-medium"
+              className="hover:underline"
+            >
+              Once UI
+            </Text>
           </Text>
         </Text>
         <Flex gap="16">

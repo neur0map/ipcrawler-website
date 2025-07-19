@@ -38,6 +38,49 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="keywords" content="hack the box wordlists, directory enumeration, smart wordlist selection, htb recon automation, reconnaissance tools, cybersecurity scanning, penetration testing, intelligent enumeration" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#10b981" />
+        <meta name="msapplication-TileColor" content="#10b981" />
+        <link rel="canonical" href={baseURL} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SoftwareApplication',
+              name: 'IPCrawler',
+              description: 'Intelligent wordlist selection tool that analyzes targets and recommends the perfect wordlists for Hack The Box and penetration testing.',
+              url: baseURL,
+              applicationCategory: 'SecurityApplication',
+              operatingSystem: 'Linux, Windows, macOS',
+              keywords: 'hack the box, wordlists, directory enumeration, reconnaissance, cybersecurity, penetration testing',
+              author: {
+                '@type': 'Organization',
+                name: 'IPCrawler',
+                url: baseURL,
+                sameAs: [
+                  'https://github.com/neur0map',
+                  'https://x.com/neur0map'
+                ]
+              },
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD',
+                availability: 'https://schema.org/InStock'
+              },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '5',
+                bestRating: '5',
+                worstRating: '1',
+                ratingCount: '1'
+              }
+            })
+          }}
+        />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
