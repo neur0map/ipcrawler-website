@@ -1,6 +1,6 @@
 "use client";
 
-import { mailchimp } from "@/resources";
+import { communityEffects } from "@/resources";
 import { Button, Flex, Heading, Text, Background, Column, opacity, SpacingToken } from "@once-ui-system/core";
 
 type CommunityProps = {
@@ -26,42 +26,42 @@ export const Discord = ({ newsletter }: { newsletter: CommunityProps }) => {
         top="0"
         position="absolute"
         mask={{
-          x: mailchimp.effects.mask.x,
-          y: mailchimp.effects.mask.y,
-          radius: mailchimp.effects.mask.radius,
-          cursor: mailchimp.effects.mask.cursor
+          x: communityEffects.effects.mask.x,
+          y: communityEffects.effects.mask.y,
+          radius: communityEffects.effects.mask.radius,
+          cursor: communityEffects.effects.mask.cursor
         }}
         gradient={{
-          display: mailchimp.effects.gradient.display,
-          opacity: mailchimp.effects.gradient.opacity as opacity,
-          x: mailchimp.effects.gradient.x,
-          y: mailchimp.effects.gradient.y,
-          width: mailchimp.effects.gradient.width,
-          height: mailchimp.effects.gradient.height,
-          tilt: mailchimp.effects.gradient.tilt,
-          colorStart: mailchimp.effects.gradient.colorStart,
-          colorEnd: mailchimp.effects.gradient.colorEnd,
+          display: communityEffects.effects.gradient.display,
+          opacity: communityEffects.effects.gradient.opacity as opacity,
+          x: communityEffects.effects.gradient.x,
+          y: communityEffects.effects.gradient.y,
+          width: communityEffects.effects.gradient.width,
+          height: communityEffects.effects.gradient.height,
+          tilt: communityEffects.effects.gradient.tilt,
+          colorStart: communityEffects.effects.gradient.colorStart,
+          colorEnd: communityEffects.effects.gradient.colorEnd,
         }}
         dots={{
-          display: mailchimp.effects.dots.display,
-          opacity: mailchimp.effects.dots.opacity as opacity,
-          size: mailchimp.effects.dots.size as SpacingToken,
-          color: mailchimp.effects.dots.color,
+          display: communityEffects.effects.dots.display,
+          opacity: communityEffects.effects.dots.opacity as opacity,
+          size: communityEffects.effects.dots.size as SpacingToken,
+          color: communityEffects.effects.dots.color,
         }}
         grid={{
-          display: mailchimp.effects.grid.display,
-          opacity: mailchimp.effects.grid.opacity as opacity,
-          color: mailchimp.effects.grid.color,
-          width: mailchimp.effects.grid.width,
-          height: mailchimp.effects.grid.height,
+          display: communityEffects.effects.grid.display,
+          opacity: communityEffects.effects.grid.opacity as opacity,
+          color: communityEffects.effects.grid.color,
+          width: communityEffects.effects.grid.width,
+          height: communityEffects.effects.grid.height,
         }}
         lines={{
-          display: mailchimp.effects.lines.display,
-          opacity: mailchimp.effects.lines.opacity as opacity,
-          size: mailchimp.effects.lines.size as SpacingToken,
-          thickness: mailchimp.effects.lines.thickness,
-          angle: mailchimp.effects.lines.angle,
-          color: mailchimp.effects.lines.color,
+          display: communityEffects.effects.lines.display,
+          opacity: communityEffects.effects.lines.opacity as opacity,
+          size: communityEffects.effects.lines.size as SpacingToken,
+          thickness: communityEffects.effects.lines.thickness,
+          angle: communityEffects.effects.lines.angle,
+          color: communityEffects.effects.lines.color,
         }}
       />
       <Heading style={{ position: "relative" }} marginBottom="s" variant="display-strong-xs">

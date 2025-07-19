@@ -1,6 +1,5 @@
 import { home } from "./content";
 
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
 const baseURL = "https://ipcrawler.io";
 
 const routes = {
@@ -8,7 +7,6 @@ const routes = {
   "/about": true,
   "/work": true,
   "/blog": true,
-  // Gallery removed as requested
 };
 
 const display = {
@@ -17,10 +15,8 @@ const display = {
   themeSwitcher: true
 };
 
-// No protected routes needed for IPCrawler website
 const protectedRoutes = {};
 
-// Import and set font for each variant
 import { Geist } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 
@@ -55,24 +51,23 @@ const fonts = {
   code: code,
 };
 
-// default customization applied to the HTML in the main layout.tsx
 const style = {
-  theme: "dark", // dark | light | system - dark for terminal aesthetic
-  neutral: "slate", // sand | gray | slate | custom - slate for professional look
-  brand: "green", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom - green for terminal/hacker aesthetic
-  accent: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom - cyan for highlights
+  theme: "dark",
+  neutral: "slate",
+  brand: "green",
+  accent: "cyan",
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
-  border: "conservative", // rounded | playful | conservative - conservative for professional look
+  border: "conservative",
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
-  scaling: "100" // 90 | 95 | 100 | 105 | 110
+  scaling: "100"
 };
 
 const dataStyle = {
-  variant: "gradient", // flat | gradient | outline
+  variant: "gradient",
   mode: "categorical", // categorical | divergent | sequential
-  height: 24, // default chart height
+  height: 24,
   axis: {
     stroke: "var(--neutral-alpha-weak)",
   },
@@ -124,8 +119,7 @@ const effects = {
   },
 };
 
-const mailchimp = {
-  action: "https://url/subscribe/post?parameters",
+const communityEffects = {
   effects: {
     mask: {
       cursor: true,
@@ -168,19 +162,17 @@ const mailchimp = {
   }
 };
 
-// default schema data
 const schema = {
   logo: "",
   type: "SoftwareApplication",
   name: "IPCrawler",
   description: home.description,
-  email: "ipcrawler@example.com",
+  email: "hello@ipcrawler.io",
 };
 
-// social links
 const sameAs = {
   github: "https://github.com/neur0map",
   x: "https://x.com/neur0map",
 };
 
-export { display, mailchimp, routes, protectedRoutes, baseURL, fonts, style, schema, sameAs, effects, dataStyle };
+export { display, communityEffects, routes, protectedRoutes, baseURL, fonts, style, schema, sameAs, effects, dataStyle };

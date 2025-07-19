@@ -47,7 +47,6 @@ export default async function RootLayout({
                   const root = document.documentElement;
                   const defaultTheme = 'system';
                   
-                  // Set defaults from config
                   const config = ${JSON.stringify({
                     brand: style.brand,
                     accent: style.accent,
@@ -61,7 +60,6 @@ export default async function RootLayout({
                     'viz-style': dataStyle.variant,
                   })};
                   
-                  // Apply default values
                   Object.entries(config).forEach(([key, value]) => {
                     root.setAttribute('data-' + key, value);
                   });

@@ -8,7 +8,7 @@ const person = {
   },
   role: "Intelligent Wordlist Selection",
   avatar: "/images/logo.png",
-  email: "ipcrawler@example.com",
+  email: "hello@ipcrawler.io",
   location: "", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: [], // optional: Leave the array empty if you don't want to display languages
 };
@@ -182,7 +182,7 @@ const blog = {
   label: "Changelog",
   title: "IPCrawler Changelog",
   description: `Release notes, updates, and version history for IPCrawler`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
+  // Add blog posts as .mdx files in app/blog/posts
   // All posts will be listed on the /blog route
 };
 
@@ -191,10 +191,8 @@ const work = {
   label: "Docs",
   title: `Documentation – ${person.name}`,
   description: `Complete guide to IPCrawler installation, usage, and SmartList algorithm`,
-  // Create new documentation pages by adding a new .mdx file to app/work/documentation
-  // All documentation pages will be listed on the /home and /work routes
+  // Add documentation as .mdx files in app/work/documentation
 };
 
-// Gallery section removed as requested
 
 export { person, social, newsletter, home, about, blog, work };
