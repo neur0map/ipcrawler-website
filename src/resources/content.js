@@ -48,7 +48,7 @@ const home = {
   headline: <>Never Guess Wordlists Again in HTB.</>,
   featured: {
     display: true,
-    title: <>Introducing: <strong className="ml-4">SmartList - Know exactly which wordlists to use in Hack The Box</strong></>,
+    title: <>Introducing: <strong className="ml-4">SmartList-Know exactly which wordlist to use</strong></>,
     href: "/work/smartlist-algorithm",
   },
   subline: (

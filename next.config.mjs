@@ -22,10 +22,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-  },
 };
 
 export default withMDX(nextConfig);

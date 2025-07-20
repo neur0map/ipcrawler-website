@@ -1,5 +1,4 @@
 import { Column, Heading, Text, Button, Flex } from "@once-ui-system/core";
-import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -10,22 +9,16 @@ export default function NotFound() {
       <Heading marginBottom="l" variant="display-default-xs">
         Directory Not Found
       </Heading>
-      <Column maxWidth="32" alignSelf="center">
-        <Text onBackground="neutral-weak" align="center">
-          Looks like you hit a dead end. Unlike HTB enumeration, this path doesn&apos;t exist. 
-          Let SmartList help you find the directories that actually matter.
-        </Text>
-      </Column>
+      <Text onBackground="neutral-weak">
+        Looks like you hit a dead end. Unlike HTB enumeration, this path doesn&apos;t exist. 
+        Let SmartList help you find the directories that actually matter.
+      </Text>
       <Flex gap="s" marginTop="l">
-        <Button asChild variant="primary">
-          <Link href="/">
-            Back to Home
-          </Link>
+        <Button href="/" variant="primary">
+          Back to Home
         </Button>
-        <Button asChild variant="secondary">
-          <Link href="/work/smartlist-algorithm">
-            Learn SmartList
-          </Link>
+        <Button href="/work/smartlist-algorithm" variant="secondary">
+          Learn SmartList
         </Button>
       </Flex>
     </Column>
