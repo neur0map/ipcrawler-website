@@ -11,7 +11,7 @@ export default function NotFound() {
         Directory Not Found
       </Heading>
       <Text onBackground="neutral-weak" textAlign="center" maxWidth="32">
-        Looks like you hit a dead end. Unlike HTB enumeration, this path doesn't exist. 
+        Looks like you hit a dead end. Unlike HTB enumeration, this path doesn&apos;t exist. 
         Let SmartList help you find the directories that actually matter.
       </Text>
       <Flex gap="s" marginTop="l">
