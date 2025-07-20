@@ -10,10 +10,12 @@ export default function NotFound() {
       <Heading marginBottom="l" variant="display-default-xs">
         Directory Not Found
       </Heading>
-      <Text onBackground="neutral-weak" textAlign="center" maxWidth="32">
-        Looks like you hit a dead end. Unlike HTB enumeration, this path doesn&apos;t exist. 
-        Let SmartList help you find the directories that actually matter.
-      </Text>
+      <Column maxWidth="32" alignSelf="center">
+        <Text onBackground="neutral-weak" align="center">
+          Looks like you hit a dead end. Unlike HTB enumeration, this path doesn&apos;t exist. 
+          Let SmartList help you find the directories that actually matter.
+        </Text>
+      </Column>
       <Flex gap="s" marginTop="l">
         <Button asChild variant="primary">
           <Link href="/">
