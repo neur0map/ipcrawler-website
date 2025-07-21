@@ -167,7 +167,7 @@ const schema = {
   type: "SoftwareApplication",
   name: "IPCrawler",
   description: home.description,
-  email: "hello@ipcrawler.io",
+  email: "neur0map@ipcrawler.io",
 };
 
 const sameAs = {

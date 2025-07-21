@@ -8,7 +8,7 @@ const person = {
   },
   role: "SmartList Engine - Intelligent Wordlist Recommendation",
   avatar: "/images/logo.png",
-  email: "hello@ipcrawler.io",
+  email: "neur0map@ipcrawler.io",
   location: "", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: [], // optional: Leave the array empty if you don't want to display languages
 };
