@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/5112ecd8-d721-4dce-8f86-f3f2effc451c
 
 ## 🎯 What is IPCrawler?
 
-IPCrawler is an **intelligent network reconnaissance orchestrator** that revolutionizes penetration testing workflows. Instead of manually running separate nmap scans, directory busters, and service enumeration tools, IPCrawler intelligently chains these operations with its breakthrough **SmartList algorithm**.
+IPCrawler is a **SmartList Engine - an intelligent wordlist recommendation system** for security testing. It analyzes targets and recommends optimal wordlists for fuzzing and reconnaissance based on discovered services and technologies, using its breakthrough **SmartList Engine**.
 
 ### 🔥 The Problem We Solve
 
@@ -40,10 +40,10 @@ Traditional pentest workflow is painfully manual:
 ### ⚡ IPCrawler's Solution
 
 - **🎯 2-Phase Smart Scanning**: Fast discovery → Targeted analysis (80-90% time reduction)
-- **🧠 SmartList Algorithm**: Automatically picks the best wordlists based on discovered services
-- **⚡ Parallel Processing**: Runs multiple scans simultaneously
-- **📊 Real-time Results**: See findings as they're discovered
-- **📋 Comprehensive Reporting**: JSON, TXT, and HTML outputs
+- **🧠 SmartList Engine**: Intelligent wordlist recommendation with confidence scoring
+- **🔍 Entropy Analysis**: Ensures diverse wordlist selection (v0.1.0-alpha-2)
+- **🛡️ Privacy-First Caching**: Secure local caching for efficiency
+- **📊 Audit Framework**: Comprehensive quality analysis with --audit flag
 
 ## 🏗️ Website Architecture
 
@@ -97,13 +97,14 @@ Visit `http://localhost:3000` to see the website in action!
 
 ## 🧠 SmartList Algorithm
 
-The website's centerpiece is explaining IPCrawler's breakthrough **SmartList algorithm**:
+The website's centerpiece is explaining IPCrawler's breakthrough **SmartList Engine**:
 
 ### How It Works
 1. **🔍 Service Discovery**: Identifies running services (WordPress, Tomcat, MySQL, etc.)
-2. **🎯 Technology Mapping**: Maps services to relevant attack vectors
-3. **📊 Confidence Scoring**: Rates wordlist recommendations (HIGH/MEDIUM/LOW)
-4. **📚 Intelligent Selection**: Picks optimal wordlists from SecLists catalog
+2. **🎯 Technology Mapping**: Maps services using discriminator-based scoring
+3. **📊 Confidence Scoring**: Rates wordlists (HIGH/MEDIUM/LOW) with entropy analysis
+4. **📚 Intelligent Selection**: Recommends optimal wordlists from SecLists catalog
+5. **🔐 Privacy Caching**: Stores results locally with secure metadata
 
 ### Example Intelligence
 ```
@@ -147,9 +148,9 @@ Find attack surfaces faster with intelligent tool chaining
 - Recent updates feed
 
 ### 🧠 Algorithm Page (`/about`)
-- SmartList algorithm explanation
-- "Old way" vs "Smart way" comparison
-- Technical deep-dive with examples
+- SmartList Engine explanation
+- "Without SmartList Engine" vs "With SmartList Engine" comparison
+- Technical deep-dive with entropy analysis and scoring details
 
 ### 📖 Documentation Hub (`/work`)
 - Complete implementation guide
@@ -166,7 +167,7 @@ Find attack surfaces faster with intelligent tool chaining
 
 The hero video (`public/videos/hero_video.mp4`) demonstrates:
 - Real-time IPCrawler execution
-- SmartList recommendations in action
+- SmartList Engine recommendations with confidence scores
 - Terminal-style output with syntax highlighting
 - Speed comparison vs traditional methods
 
@@ -191,6 +192,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ by the IPCrawler team**
 
-*Revolutionizing network reconnaissance, one smart scan at a time*
+*SmartList Engine - Never Guess Wordlists Again*
 
 </div>

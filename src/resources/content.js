@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Intelligent Wordlist Selection",
+  role: "SmartList Engine - Intelligent Wordlist Recommendation",
   avatar: "/images/logo.png",
   email: "hello@ipcrawler.io",
   location: "", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -44,17 +44,18 @@ const home = {
   image: "/images/og/og.png",
   label: "Home",
   title: `IPCrawler - ${person.role}`,
-  description: `Stop guessing which wordlists to use in Hack The Box. IPCrawler's SmartList algorithm analyzes your target and recommends the perfect wordlists with confidence scores for faster enumeration.`,
+  description: `IPCrawler is a SmartList Engine - an intelligent wordlist recommendation system for security testing. It analyzes targets and recommends optimal wordlists for fuzzing and reconnaissance based on discovered services and technologies.`,
   headline: <>Never Guess Wordlists Again in HTB.</>,
   featured: {
     display: true,
-    title: <>Introducing: <strong className="ml-4">SmartList-Know exactly which wordlist to use</strong></>,
+    // note: Do not modify the title, it's used for the featured post in the home page
+    title: <>Introducing: <strong className="ml-4">SmartList Engine v0.1.0-alpha-2 - Now with Entropy Analysis & Audit Framework</strong></>,
     href: "/work/smartlist-algorithm",
   },
   subline: (
     <>
-      IPCrawler&apos;s SmartList algorithm analyzes discovered services and recommends the <strong>exact wordlists</strong> you need for Hack The Box challenges.
-      <br /> No more blind enumeration. <strong>Technology-aware</strong>. <strong>HTB-optimized</strong>. <strong>Find hidden directories faster</strong>.
+      IPCrawler&apos;s SmartList Engine analyzes discovered services and recommends the <strong>exact wordlists</strong> you need with confidence scores.
+      <br /> Features <strong>entropy-based diversification</strong>, <strong>privacy-first caching</strong>, and <strong>comprehensive audit capabilities</strong>.
     </>
   ),
 };
@@ -80,10 +81,11 @@ const about = {
     title: "What is SmartList?",
     description: (
       <>
-        SmartList is IPCrawler&apos;s smart feature that automatically picks the right wordlists for Hack The Box challenges. 
-        Instead of wasting time with generic wordlists, SmartList analyzes discovered services 
-        (like WordPress, Apache, databases, etc.) and suggests HTB-optimized wordlists that are most likely to find hidden directories. 
-        Think of it as having an expert HTB player guide that knows exactly which wordlists lead to first blood.
+        The SmartList Engine is IPCrawler&apos;s core intelligent wordlist recommendation system. 
+        It analyzes discovered services and technologies (like WordPress, Apache, databases, etc.) 
+        and recommends optimal wordlists with confidence scores based on exact technology matches, 
+        service categories, and port-based heuristics. New in v0.1.0-alpha-2: entropy analysis, 
+        discriminator-based scoring, and comprehensive audit framework with --audit flag.
       </>
     ),
   },
@@ -92,7 +94,7 @@ const about = {
     title: "The Wordlist Problem",
     experiences: [
       {
-        company: "Without SmartList",
+        company: "Without SmartList Engine",
         timeframe: "The Old HTB Way",
         role: "Manual wordlist guessing",
         achievements: [
@@ -112,18 +114,18 @@ const about = {
         images: [],
       },
       {
-        company: "With SmartList",
+        company: "With SmartList Engine",
         timeframe: "The HTB Smart Way",
         role: "Intelligent HTB enumeration",
         achievements: [
           <>
-            Found WordPress on HTB box? SmartList suggests wp-admin wordlists automatically
+            Found WordPress? SmartList Engine suggests wp-admin wordlists automatically with HIGH confidence
           </>,
           <>
-            Discovered MySQL? Get database-specific admin panel wordlists instantly
+            Discovered MySQL? Get database-specific wordlists with entropy-based diversification
           </>,
           <>
-            API endpoints detected? SmartList knows which REST/GraphQL lists work
+            API endpoints detected? SmartList Engine recommends REST/GraphQL lists with confidence scoring
           </>,
           <>
             Always use the wordlists that HTB box creators actually hide directories in
@@ -153,23 +155,23 @@ const about = {
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "How SmartList Works",
+    title: "How SmartList Engine Works",
     skills: [
       {
-        title: "HTB-Optimized Detection",
-        description: <>SmartList analyzes HTB targets and automatically identifies technologies (WordPress, MySQL, Apache, custom apps, etc.) commonly found in boxes.</>,
+        title: "Technology-Aware Detection",
+        description: <>SmartList Engine analyzes targets and automatically identifies technologies (WordPress, MySQL, Apache, custom apps, etc.) using advanced service fingerprinting and version detection.</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
-        title: "HTB-Proven Wordlist Matching",
-        description: <>Based on detected services, SmartList recommends wordlists that HTB creators actually use to hide directories and files in their boxes.</>,
+        title: "Intelligent Wordlist Matching",
+        description: <>Based on detected services, SmartList Engine recommends wordlists using discriminator-based scoring, entropy analysis for diversity, and privacy-first caching for efficiency.</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
-        title: "First Blood Priority",
-        description: <>Each wordlist gets a confidence rating (HIGH/MEDIUM/LOW) based on HTB success rates, so you know which ones to run first for fastest results.</>,
+        title: "Confidence-Based Prioritization",
+        description: <>Each wordlist gets a confidence rating (HIGH/MEDIUM/LOW) based on exact technology matches, service categories, and port heuristics, so you know which ones to run first.</>,
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
@@ -180,8 +182,8 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "IPCrawler Blog - HTB Tips & SmartList Updates",
-  description: `Hack The Box enumeration techniques, wordlist selection tips, and IPCrawler release notes for faster directory discovery`,
+  title: "IPCrawler Blog - SmartList Engine Updates & Security Research",
+  description: `IPCrawler SmartList Engine updates, intelligent wordlist recommendation techniques, and security research insights for effective reconnaissance`,
   // Add blog posts as .mdx files in app/blog/posts
   // All posts will be listed on the /blog route
 };

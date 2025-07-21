@@ -1,7 +1,7 @@
 ---
-title: "SmartList Algorithm: The Game Changer"
+title: "SmartList Engine: The Game Changer"
 publishedAt: "2024-11-12"
-summary: "The industry's first intelligent wordlist recommendation engine. Stop guessing, start knowing exactly which wordlists will find vulnerabilities."
+summary: "The industry's first intelligent wordlist recommendation system with entropy analysis, discriminator-based scoring, and privacy-first caching. Version 0.1.0-alpha-2 introduces comprehensive audit capabilities."
 images:
   - "/images/documentation/ipcrawler/smartlist.jpg"
 team:
@@ -12,15 +12,18 @@ team:
 
 ## The Revolution
 
-**SmartList is the breakthrough that changes everything about enumeration.** No more guessing which wordlist to use from thousands of options. No more wasted hours on generic lists that find nothing. SmartList analyzes your target and tells you exactly which wordlists will find vulnerabilities - with calculated confidence scores.
+**SmartList Engine is the breakthrough that changes everything about enumeration.** No more guessing which wordlist to use from thousands of options. The SmartList Engine analyzes your target and recommends exactly which wordlists to use - with calculated confidence scores, entropy-based diversification, and discriminator-based matching.
 
 ## How It Works
 
-The algorithm processes:
+The SmartList Engine processes:
 1. **Service Identification**: Maps discovered services to technology categories
 2. **Technology Stack Analysis**: Identifies frameworks, CMS, and dependencies
-3. **Context Evaluation**: Considers port numbers, SSL usage, headers
-4. **Wordlist Scoring**: Ranks wordlists by relevance and success probability
+3. **Discriminator-Based Matching**: Uses unique identifiers for precise technology matching
+4. **Entropy Analysis**: Ensures diverse wordlist selection for comprehensive coverage
+5. **Context Evaluation**: Considers port numbers, SSL usage, headers
+6. **Wordlist Scoring**: Ranks wordlists by relevance with confidence levels
+7. **Privacy-First Caching**: Stores results locally with secure metadata
 
 ## Intelligence Examples
 
@@ -42,13 +45,15 @@ HIGH Confidence:
   → api-endpoints.txt (REST API patterns)
 ```
 
-## Scoring Algorithm
+## Scoring Algorithm (v0.1.0-alpha-2)
 
 Confidence levels based on:
-- **Service Match**: Direct technology correlation (±40 points)
-- **Version Specificity**: Known vulnerable versions (±20 points)
-- **Port Context**: Standard vs non-standard ports (±10 points)
-- **Pattern Database**: Matching against known successful patterns (±30 points)
+- **Exact Technology Match**: Direct correlation using discriminators (HIGH confidence)
+- **Service Category Match**: General service type matching (MEDIUM confidence)
+- **Port-Based Heuristics**: Standard port assumptions (LOW confidence)
+- **Entropy Score**: Diversity factor for comprehensive coverage
+- **Coverage Analysis**: Ensures critical paths aren't missed
+- **Pattern Database**: Historical success patterns
 
 ## Technology Mappings
 
@@ -61,11 +66,21 @@ Comprehensive detection for:
 
 ## Pattern Database
 
-The algorithm uses a comprehensive database of:
-- Technology-to-wordlist mappings
-- Service-specific path patterns
+The SmartList Engine uses a comprehensive database of:
+- Technology-to-wordlist mappings with discriminators
+- Service-specific path patterns with entropy scores
 - Framework-based directory structures
 - Historical vulnerability locations
+- Privacy-preserved caching for performance
+
+## Audit Framework (New in v0.1.0-alpha-2)
+
+The `--audit` flag provides comprehensive analysis:
+- **Rule Coverage**: Validates all scoring rules
+- **Entropy Analysis**: Checks wordlist diversity
+- **Conflict Detection**: Identifies rule overlaps
+- **Usage Statistics**: Shows recommendation patterns
+- **Quality Metrics**: Ensures optimal performance
 
 ## Real-World Impact
 
@@ -76,11 +91,14 @@ gobuster dir -u https://target.com -w common.txt
 # Often misses technology-specific paths
 ```
 
-With SmartList:
+With SmartList Engine:
 ```bash
-# Intelligent recommendation
-"WordPress detected - use wp-plugins.txt (HIGH confidence)"
-"Backup files likely - use backup-files.txt (MEDIUM confidence)"
+# Intelligent recommendation with confidence scores
+"WordPress detected - use wp-plugins.txt (HIGH confidence - exact match)"
+"Web server detected - use common.txt (MEDIUM confidence - category match)"
+"Port 443 - use directory-list-2.3-medium.txt (LOW confidence - port heuristic)"
+# Run audit for quality analysis
+ipcrawler --audit
 ```
 
 ## Integration Benefits
@@ -92,4 +110,4 @@ With SmartList:
 
 ## Outcome
 
-SmartList transforms wordlist selection from guesswork to science. By analyzing the complete reconnaissance picture, it provides expert-level recommendations that dramatically improve the efficiency and success rate of continued enumeration efforts.
+SmartList Engine transforms wordlist selection from guesswork to science. With version 0.1.0-alpha-2's entropy analysis, discriminator-based scoring, and comprehensive audit framework, it provides expert-level recommendations that dramatically improve the efficiency and success rate of reconnaissance efforts. The privacy-first caching ensures fast performance while maintaining security.

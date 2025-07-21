@@ -27,7 +27,7 @@ export default function Home() {
         {/* Left side - Text content */}
         <Column flex={3} gap="m" horizontal="start">
           {home.featured.display && (
-            <RevealFx fillWidth horizontal="start" paddingBottom="24">
+            <RevealFx translateY={4} delay={0.05} fillWidth horizontal="start" paddingBottom="24">
               <Badge 
                 background="brand-alpha-weak" 
                 paddingX="12" 
@@ -41,19 +41,19 @@ export default function Home() {
             </RevealFx>
           )}
           
-          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16">
+          <RevealFx translateY={6} delay={0.1} fillWidth horizontal="start" paddingBottom="16">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
           </RevealFx>
           
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="32">
+          <RevealFx translateY={8} delay={0.15} fillWidth horizontal="start" paddingBottom="32">
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-l">
               {home.subline}
             </Text>
           </RevealFx>
           
-          <RevealFx delay={0.4} horizontal="start">
+          <RevealFx translateY={4} delay={0.2} horizontal="start">
             <Button
               id="about"
               data-border="rounded"
@@ -78,13 +78,14 @@ export default function Home() {
         </Column>
 
         {/* Right side - Video */}
-        <RevealFx translateY="8" delay={0.3} flex={2} horizontal="center">
+        <RevealFx translateY={8} delay={0.25} flex={2} horizontal="center">
           <div style={{
             position: 'relative',
             width: '100%',
             maxWidth: '800px',
             height: '450px',
-            perspective: '1200px'
+            perspective: '1000px',
+            padding: '-50px',
           }}>
             <video
               autoPlay
@@ -95,7 +96,7 @@ export default function Home() {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                objectPosition: 'left center',
+                objectPosition: '9% center',
                 borderRadius: '20px',
                 transform: 'rotateY(-15deg) rotateX(5deg)',
                 transformStyle: 'preserve-3d',
@@ -120,18 +121,20 @@ export default function Home() {
               left: '30px',
               right: '-30px',
               bottom: '-30px',
-              background: 'linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1))',
+              background: 'linear-gradient(135deg, rgba(0,0,0,0.15), rgba(0,0,0,0.08))',
               borderRadius: '20px',
               zIndex: -1,
               transform: 'rotateY(-15deg) rotateX(5deg)',
-              filter: 'blur(20px)'
+              filter: 'blur(20px)',
+              opacity: '0.7',
+              transition: 'opacity 1.2s ease-out 0.4s'
             }} />
           </div>
         </RevealFx>
       </Flex>
 
       {/* Installation */}
-      <RevealFx translateY="12" delay={0.5}>
+      <RevealFx translateY={8} delay={0.3}>
         <Column fillWidth gap="16">
           <Heading variant="heading-strong-m">
             Get Started in 30 Seconds
@@ -155,7 +158,7 @@ make install`,
 
       {/* Recent Updates */}
       {routes["/blog"] && (
-        <RevealFx translateY="20" delay={0.8}>
+        <RevealFx translateY={8} delay={0.4}>
           <Column fillWidth gap="16" horizontal="center">
             <Heading as="h2" variant="heading-strong-l" style={{ textAlign: 'center' }}>
               Recent Updates
@@ -167,7 +170,7 @@ make install`,
 
       {/* Newsletter */}
       {newsletter.display && (
-        <RevealFx translateY="24" delay={1.0}>
+        <RevealFx translateY={8} delay={0.5}>
           <Discord newsletter={newsletter} />
         </RevealFx>
       )}

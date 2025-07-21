@@ -12,7 +12,7 @@ team:
 
 ## Overview
 
-Fast Port Discovery exists for one purpose: **to feed SmartList the data it needs to make perfect wordlist recommendations.** The faster we discover services, the sooner SmartList can analyze them and tell you exactly which wordlists will find vulnerabilities.
+Fast Port Discovery exists for one purpose: **to feed the SmartList Engine the data it needs to make perfect wordlist recommendations.** The faster we discover services, the sooner SmartList Engine can analyze them and tell you exactly which wordlists will find vulnerabilities. All discovered data is stored in privacy-first local caching for optimal performance.
 
 ## Key Features
 
@@ -54,3 +54,17 @@ The workflow uses:
 ## Outcome
 
 This phase eliminates the biggest time sink in reconnaissance - waiting for port scans. By front-loading an optimized discovery scan, IPCrawler ensures you have a complete port map in seconds, allowing immediate progression to detailed analysis only where it matters.
+
+## SmartList Quality Assurance
+
+After discovery completes, you can analyze the quality of SmartList recommendations using:
+
+```bash
+# Run comprehensive audit of SmartList Engine
+ipcrawler --audit
+
+# View detailed conflict analysis
+ipcrawler --audit --details
+```
+
+The audit framework validates rule coverage, entropy scores, and recommendation patterns to ensure optimal wordlist selection.

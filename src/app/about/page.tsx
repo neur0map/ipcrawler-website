@@ -10,7 +10,8 @@ import {
   Tag,
   Text,
   Meta,
-  Schema
+  Schema,
+  RevealFx
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -164,13 +165,15 @@ export default function About() {
           </Column>
 
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
-              {about.intro.description}
-            </Column>
+            <RevealFx translateY={6} delay={0.1}>
+              <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+                {about.intro.description}
+              </Column>
+            </RevealFx>
           )}
 
           {about.work.display && (
-            <>
+            <RevealFx translateY={8} delay={0.15}>
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
@@ -228,11 +231,11 @@ export default function About() {
                   </Column>
                 ))}
               </Column>
-            </>
+            </RevealFx>
           )}
 
           {about.studies.display && (
-            <>
+            <RevealFx translateY={8} delay={0.2}>
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
                 {about.studies.title}
               </Heading>
@@ -248,11 +251,11 @@ export default function About() {
                   </Column>
                 ))}
               </Column>
-            </>
+            </RevealFx>
           )}
 
           {about.technical.display && (
-            <>
+            <RevealFx translateY={8} delay={0.25}>
               <Heading
                 as="h2"
                 id={about.technical.title}
@@ -297,7 +300,7 @@ export default function About() {
                   </Column>
                 ))}
               </Column>
-            </>
+            </RevealFx>
           )}
         </Column>
       </Flex>

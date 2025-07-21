@@ -160,7 +160,7 @@ cd ipcrawler
 make install
 
 # Verify installation
-python3 ipcrawler.py --version`,
+ipcrawler --version`,
                       language: "shell",
                       label: "Installation"
                     }
@@ -187,13 +187,13 @@ python3 ipcrawler.py --version`,
                   codes={[
                     {
                       code: `# Basic scan
-python3 ipcrawler.py 10.10.10.123
+ipcrawler 10.10.10.123
 
 # Enhanced scan with sudo (recommended)
-sudo python3 ipcrawler.py target.com
+ipcrawler target.com
 
 # Scan with specific output directory
-python3 ipcrawler.py target.com --output /path/to/results`,
+ipcrawler target.com --output /path/to/results`,
                       language: "shell",
                       label: "Basic Usage"
                     }
