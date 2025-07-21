@@ -136,6 +136,12 @@ export default async function RootLayout({
             `,
           }}
         />
+        <script defer data-domain="ipcrawler.io" src="https://plausible-analytics-ce-production-1761.up.railway.app/js/script.hash.outbound-links.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`
+          }}
+        />
       </head>
       <Providers>
         <Column as="body" background="page" fillWidth style={{minHeight: "100vh"}} margin="0" padding="0" horizontal="center">
