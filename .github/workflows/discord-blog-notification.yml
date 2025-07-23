@@ -1,0 +1,37 @@
+name: Discord Blog Notification
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/app/blog/posts/*.mdx'
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            src/app/blog/posts/*.mdx
+      
+      - name: Send Discord notification
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          node .github/scripts/send-discord-notification.js "${{ steps.changed-files.outputs.all_changed_files }}"
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

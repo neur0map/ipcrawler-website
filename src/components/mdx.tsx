@@ -128,7 +128,16 @@ function createCodeBlock(props: any) {
     const { className, children } = props.children.props;
     
     // Extract language from className (format: language-xxx)
-    const language = className.replace('language-', '');
+    let language = className.replace('language-', '');
+    
+    // Map problematic languages to supported ones
+    const languageMap: { [key: string]: string } = {
+      'tsx': 'javascript',
+      'ts': 'javascript',
+      'jsx': 'javascript'
+    };
+    
+    language = languageMap[language] || language;
     const label = language.charAt(0).toUpperCase() + language.slice(1);
     
     return (
