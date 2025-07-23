@@ -45,7 +45,7 @@ const home = {
   label: "Home",
   title: `IPCrawler - ${person.role}`,
   description: `IPCrawler is a SmartList Engine - an intelligent wordlist recommendation system for security testing. It analyzes targets and recommends optimal wordlists for fuzzing and reconnaissance based on discovered services and technologies.`,
-  headline: <>Never Guess Wordlists Again in HTB.</>,
+  headline: <>Never Guess Wordlists Again.</>,
   featured: {
     display: true,
     // note: Do not modify the title, it's used for the featured post in the home page
@@ -95,7 +95,7 @@ const about = {
     experiences: [
       {
         company: "Without SmartList Engine",
-        timeframe: "The Old HTB Way",
+        timeframe: "The Old Way",
         role: "Manual wordlist guessing",
         achievements: [
           <>
