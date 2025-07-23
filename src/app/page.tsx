@@ -170,8 +170,8 @@ make install`,
                 onBackground="brand-strong" 
               />
               <Column gap="4">
-                <Text variant="body-strong-s"></Text>
-                <Badge size="s" background="success-weak" onBackground="success-strong">
+                <Text variant="body-strong-s">macOS</Text>
+                <Badge background="success-weak" onBackground="success-strong">
                   Compatible
                 </Badge>
               </Column>
@@ -185,8 +185,8 @@ make install`,
                 onBackground="brand-strong" 
               />
               <Column gap="4">
-                <Text variant="body-strong-s"></Text>
-                <Badge size="s" background="success-weak" onBackground="success-strong">
+                <Text variant="body-strong-s">Linux</Text>
+                <Badge background="success-weak" onBackground="success-strong">
                   Compatible
                 </Badge>
               </Column>
@@ -200,8 +200,8 @@ make install`,
                 onBackground="brand-strong" 
               />
               <Column gap="4">
-                <Text variant="body-strong-s"></Text>
-                <Badge size="s" background="success-weak" onBackground="success-strong">
+                <Text variant="body-strong-s">Hack The Box</Text>
+                <Badge background="success-weak" onBackground="success-strong">
                   Compatible
                 </Badge>
               </Column>
@@ -215,8 +215,8 @@ make install`,
                 onBackground="neutral-weak" 
               />
               <Column gap="4">
-                <Text variant="body-strong-s"></Text>
-                <Badge size="s" background="danger-weak" onBackground="danger-strong">
+                <Text variant="body-strong-s">Windows</Text>
+                <Badge background="danger-weak" onBackground="danger-strong">
                   Not Compatible
                 </Badge>
               </Column>
