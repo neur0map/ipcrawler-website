@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Schema, CodeBlock } from "@once-ui-system/core";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Schema, CodeBlock, Icon } from "@once-ui-system/core";
 import { home, about, person, newsletter, baseURL, routes } from "@/resources";
 import { Discord } from "@/components";
 import { Posts } from "@/components/blog/Posts";
@@ -152,6 +152,76 @@ make install`,
             ]}
             copyButton={true}
           />
+        </Column>
+      </RevealFx>
+
+      {/* OS Compatibility */}
+      <RevealFx translateY={8} delay={0.35}>
+        <Column fillWidth gap="16">
+          <Heading variant="heading-strong-m">
+            Platform Compatibility
+          </Heading>
+          <Row gap="24" wrap>
+            {/* macOS - Compatible */}
+            <Flex vertical="center" gap="8">
+              <Icon 
+                name="apple" 
+                size="l" 
+                onBackground="brand-strong" 
+              />
+              <Column gap="4">
+                <Text variant="body-strong-s"></Text>
+                <Badge size="s" background="success-weak" onBackground="success-strong">
+                  Compatible
+                </Badge>
+              </Column>
+            </Flex>
+
+            {/* Linux - Compatible */}
+            <Flex vertical="center" gap="8">
+              <Icon 
+                name="linux" 
+                size="l" 
+                onBackground="brand-strong" 
+              />
+              <Column gap="4">
+                <Text variant="body-strong-s"></Text>
+                <Badge size="s" background="success-weak" onBackground="success-strong">
+                  Compatible
+                </Badge>
+              </Column>
+            </Flex>
+
+            {/* Hack The Box - Compatible */}
+            <Flex vertical="center" gap="8">
+              <Icon 
+                name="hackthebox" 
+                size="l" 
+                onBackground="brand-strong" 
+              />
+              <Column gap="4">
+                <Text variant="body-strong-s"></Text>
+                <Badge size="s" background="success-weak" onBackground="success-strong">
+                  Compatible
+                </Badge>
+              </Column>
+            </Flex>
+
+            {/* Windows - Not Compatible */}
+            <Flex vertical="center" gap="8">
+              <Icon 
+                name="windows" 
+                size="l" 
+                onBackground="neutral-weak" 
+              />
+              <Column gap="4">
+                <Text variant="body-strong-s"></Text>
+                <Badge size="s" background="danger-weak" onBackground="danger-strong">
+                  Not Compatible
+                </Badge>
+              </Column>
+            </Flex>
+          </Row>
         </Column>
       </RevealFx>
 
