@@ -98,7 +98,7 @@ export default function Documentation() {
                 onBackground="brand-strong"
                 textVariant="label-default-xs"
                 className="hover:scale-105 transition-transform duration-200">
-                v0.1.0-alpha-2
+                v0.1.0-alpha-3
               </Badge>
               <Badge
                 background="neutral-alpha-weak"

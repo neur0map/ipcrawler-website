@@ -49,7 +49,7 @@ const home = {
   featured: {
     display: true,
     // note: Do not modify the title, it's used for the featured post in the home page
-    title: <>Introducing: <strong className="ml-4">SmartList Engine v0.1.0-alpha-2 - Now with Entropy Analysis & Audit Framework</strong></>,
+    title: <>Introducing: <strong className="ml-4">SmartList Engine v0.1.0-alpha-3 - Enhanced Error Handling & HTTP Intelligence Revolution</strong></>,
     href: "/work/smartlist-algorithm",
   },
   subline: (
@@ -84,8 +84,8 @@ const about = {
         The SmartList Engine is IPCrawler&apos;s core intelligent wordlist recommendation system. 
         It analyzes discovered services and technologies (like WordPress, Apache, databases, etc.) 
         and recommends optimal wordlists with confidence scores based on exact technology matches, 
-        service categories, and port-based heuristics. New in v0.1.0-alpha-2: entropy analysis, 
-        discriminator-based scoring, and comprehensive audit framework with --audit flag.
+              service categories, and port-based heuristics. New in v0.1.0-alpha-3: enhanced error handling, 
+      modular HTTP scanner architecture, and intelligent Mini Spider workflow with security analysis.
       </>
     ),
   },
