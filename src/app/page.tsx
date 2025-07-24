@@ -111,7 +111,7 @@ export default function Home() {
                 filter: 'brightness(0.95) contrast(1.1)'
               }}
             >
-              <source src="/public/videos/hero_video.mp4" type="video/mp4" />
+              <source src="/videos/hero_video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             {/* Additional shadow layer for more depth */}
