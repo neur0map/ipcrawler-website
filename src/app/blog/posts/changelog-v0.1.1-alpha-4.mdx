@@ -1,0 +1,100 @@
+---
+title: "IPCrawler v0.1.1-alpha-4: SmartList 2.0 with Improved Recommendations"
+summary: "SmartList 2.0 brings expanded technology detection, better recommendation logic, and database-driven architecture improvements."
+image: "/images/og/og.png"
+publishedAt: "2025-07-27"
+tag: "Version Released"
+---
+
+## IPCrawler v0.1.1-alpha-4
+
+🔧 **SmartList 2.0: Improved Wordlist Recommendations**
+
+This release introduces SmartList 2.0, a redesigned recommendation engine that aims to provide more accurate and context-aware wordlist selection during security assessments.
+
+## 🚀 What's New in SmartList 2.0
+
+### Expanded Technology Detection
+SmartList 2.0 now recognizes 34+ technologies across 9 categories, expanding from the previous 10 technologies. The system can better identify modern applications and services in target environments.
+
+**New Technology Categories:**
+- **CI/CD Platforms**: GitLab, Jenkins, GitHub Enterprise, Bitbucket, Jira, Confluence
+- **Container Orchestration**: Docker, Kubernetes, OpenShift  
+- **Modern Frameworks**: Laravel, Symfony, React, Angular, Vue.js
+- **Monitoring Tools**: Splunk, Elastic Stack, Logstash, Datadog, Grafana, Prometheus
+- **Database Systems**: MySQL, PostgreSQL, MongoDB, Redis, Elasticsearch
+
+### Improved Recommendation Logic
+The new scoring system considers multiple factors when suggesting wordlists:
+
+- **Technology Matching**: Prioritizes wordlists that match detected technologies
+- **Confidence Levels**: Adjusts recommendations based on detection confidence  
+- **Scan Context**: Considers the type of assessment being performed
+- **Quality Metrics**: Uses historical effectiveness data to guide selection
+
+### Better Diversity Controls
+To reduce repetitive recommendations, the system now includes:
+
+- **Dynamic Selection**: Varies recommendations based on context and timing
+- **Balanced Approach**: Mixes targeted and exploratory wordlists appropriately
+- **Reduced Redundancy**: Limits similar wordlists in single scans
+- **Optimized Coverage**: Balances comprehensive and focused approaches
+
+## 📊 Improvements
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Recommendations per Scan | 4-5 generic lists | 1-2 targeted lists | More focused |
+| Technology Coverage | 10 technologies | 34+ technologies | 3x increase |
+| Generic List Usage | 87.5% | Under 20% | Significant reduction |
+| Selection Quality | Basic rules | Metrics-driven | Data-informed |
+
+## 🎯 Practical Benefits
+
+### For WordPress Sites
+- **Before**: Generic directory wordlists with broad coverage
+- **After**: WordPress-specific paths, plugin enumeration, and CMS-focused lists
+
+### For Container Environments  
+- **Before**: Limited container-specific targeting
+- **After**: Docker registry paths, Kubernetes API endpoints, orchestration discovery
+
+### For CI/CD Systems
+- **Before**: Standard web directory scanning
+- **After**: Jenkins job discovery, GitLab API enumeration, build artifact paths
+
+## 🔧 Technical Changes
+
+SmartList 2.0 uses a database-driven architecture that removes hardcoded mappings. Key improvements include:
+
+- **Multi-Factor Scoring**: Considers multiple contextual factors for each recommendation
+- **Quality-Based Filtering**: Uses accuracy and specificity metrics in selection
+- **Extensible Design**: Easier to add new technologies and wordlists
+- **Backward Compatibility**: Existing workflows continue to function
+
+## 🚀 Getting Started
+
+SmartList 2.0 works with existing IPCrawler workflows. The recommendation engine activates automatically when technologies are detected.
+
+```shell
+# Update to latest version
+git pull origin main
+make install
+
+# Use with existing workflows
+ipcrawler target.com --workflow http_03
+```
+
+## Summary
+
+This release brings several improvements to IPCrawler:
+
+- **3x increase** in technology detection capabilities
+- **More focused** recommendations through better context awareness
+- **Reduced reliance** on generic wordlists
+- **Quality-driven** selection with performance metrics
+- **Database-driven** architecture for easier maintenance
+
+---
+
+*SmartList 2.0 continues IPCrawler's development toward more intelligent security tooling. The improved recommendation engine and expanded technology detection aim to provide better support for modern security assessment workflows.*
