@@ -42,12 +42,15 @@ To reduce repetitive recommendations, the system now includes:
 
 ## 📊 Improvements
 
-| Metric | Before | After | Change |
-|--------|--------|-------|--------|
-| Recommendations per Scan | 4-5 generic lists | 1-2 targeted lists | More focused |
-| Technology Coverage | 10 technologies | 34+ technologies | 3x increase |
-| Generic List Usage | 87.5% | Under 20% | Significant reduction |
-| Selection Quality | Basic rules | Metrics-driven | Data-informed |
+<ResponsiveTable
+  headers={['Metric', 'Before', 'After', 'Change']}
+  rows={[
+    ['Recommendations per Scan', '4-5 generic lists', '1-2 targeted lists', 'More focused'],
+    ['Technology Coverage', '10 technologies', '34+ technologies', '3x increase'],
+    ['Generic List Usage', '87.5%', 'Under 20%', 'Significant reduction'],
+    ['Selection Quality', 'Basic rules', 'Metrics-driven', 'Data-informed']
+  ]}
+/>
 
 ## 🎯 Practical Benefits
 
@@ -80,9 +83,6 @@ SmartList 2.0 works with existing IPCrawler workflows. The recommendation engine
 # Update to latest version
 git pull origin main
 make install
-
-# Use with existing workflows
-ipcrawler target.com --workflow http_03
 ```
 
 ## Summary

@@ -22,6 +22,7 @@ import {
   Media,
   SmartLink,
 } from "@once-ui-system/core";
+import { ResponsiveTable } from "./ResponsiveTable";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
@@ -179,6 +180,7 @@ const components = {
   Accordion,
   AccordionGroup,
   Table,
+  ResponsiveTable,
   Feedback,
   Button,
   Card,

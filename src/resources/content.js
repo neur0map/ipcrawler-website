@@ -49,7 +49,7 @@ const home = {
   featured: {
     display: true,
     // note: Do not modify the title, it's used for the featured post in the home page
-    title: <>Introducing: <strong className="ml-4">SmartList Engine v0.1.0-alpha-3 - Enhanced Error Handling & HTTP Intelligence Revolution</strong></>,
+    title: <>Introducing: <strong className="ml-4">SmartList 2.0 - Now with 3x more technology detection</strong></>,
     href: "/work/smartlist-algorithm",
   },
   subline: (
