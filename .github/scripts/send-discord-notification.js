@@ -34,19 +34,19 @@ async function sendDiscordNotification(blogPost) {
       ],
       author: {
         name: 'IPCrawler Blog',
-        icon_url: 'https://ipcrawler.com/favicon.ico',
-        url: 'https://ipcrawler.com/blog'
+        icon_url: 'https://ipcrawler.io/favicon.ico',
+        url: 'https://ipcrawler.io/blog'
       },
-      url: `https://ipcrawler.com/blog/${blogPost.slug}`,
+      url: `https://ipcrawler.io/blog/${blogPost.slug}`,
       timestamp: new Date().toISOString(),
       footer: {
         text: 'IPCrawler - Network Monitoring & Analysis',
-        icon_url: 'https://ipcrawler.com/favicon.ico'
+        icon_url: 'https://ipcrawler.io/favicon.ico'
       }
     }],
     content: '🚀 **New blog post alert!** Check out our latest article:',
     username: 'IPCrawler Blog Bot',
-    avatar_url: 'https://ipcrawler.com/favicon.ico'
+    avatar_url: 'https://ipcrawler.io/favicon.ico'
   };
 
   // Add thumbnail if image is available
@@ -54,7 +54,7 @@ async function sendDiscordNotification(blogPost) {
     embed.embeds[0].thumbnail = {
       url: blogPost.image.startsWith('http') 
         ? blogPost.image 
-        : `https://ipcrawler.com${blogPost.image}`
+        : `https://ipcrawler.io${blogPost.image}`
     };
   }
 
