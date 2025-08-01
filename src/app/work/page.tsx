@@ -81,7 +81,7 @@ export default function Documentation() {
         position="fixed"
         paddingLeft="24"
         gap="32"
-        hide="s"
+        {...{ hide: "s" }}
       >
         <TableOfContents structure={structure} about={{ tableOfContent }} />
       </Column>
