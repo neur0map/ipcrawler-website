@@ -12,11 +12,13 @@
     position: sticky;
     height: fit-content;
     top: var(--static-space-64);
+    align-self: flex-start;
 }
 
 @media (max-width: breakpoints.$s) {
     .avatar {
         top: auto;
+        align-self: center;
     }
 
     .textAlign {

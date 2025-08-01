@@ -88,7 +88,6 @@ export default function About() {
             paddingBottom="xl"
             gap="m"
             flex={3}
-            horizontal="center"
           >
             <Avatar src={person.avatar} size="xl" />
             {person.languages.length > 0 && (
