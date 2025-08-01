@@ -1,20 +1,42 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { RevealFx } from "@once-ui-system/core";
 
 export function HeroVideo() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   
   useEffect(() => {
-    // Show video container after 2 seconds
+    // Show video container after 1 second (reduced from 2)
     const timer = setTimeout(() => {
       setShowVideo(true);
-    }, 2000);
+    }, 1000);
     
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    // Intersection Observer for lazy loading
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      observer.observe(videoElement);
+    }
+
+    return () => observer.disconnect();
+  }, [showVideo]);
   
   return (
     <RevealFx translateY={8} delay={0.25} flex={2} horizontal="center">
@@ -29,11 +51,15 @@ export function HeroVideo() {
         transition: 'opacity 0.8s ease-out'
       }}>
         <video
-          autoPlay
+          ref={videoRef}
+          autoPlay={isInView}
           loop
           muted
           playsInline
+          preload="metadata"
+          poster="/images/og/og.png"
           onLoadedData={() => setVideoLoaded(true)}
+          onCanPlayThrough={() => setVideoLoaded(true)}
           style={{
             width: '100%',
             height: '100%',
@@ -54,7 +80,7 @@ export function HeroVideo() {
             transition: 'box-shadow 0.8s ease-out, opacity 0.8s ease-out'
           }}
         >
-          <source src="/videos/hero_video.mp4" type="video/mp4" />
+          {isInView && <source src="/videos/hero_video.mp4" type="video/mp4" />}
           Your browser does not support the video tag.
         </video>
         {/* Additional shadow layer for more depth */}
