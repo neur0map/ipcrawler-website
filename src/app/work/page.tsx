@@ -76,12 +76,12 @@ export default function Documentation() {
       
       {/* Table of Contents */}
       <Column
+        className="s-flex-hide"
         left="0"
         style={{ top: "50%", transform: "translateY(-50%)" }}
         position="fixed"
         paddingLeft="24"
         gap="32"
-        {...{ hide: "s" }}
       >
         <TableOfContents structure={structure} about={{ tableOfContent }} />
       </Column>
