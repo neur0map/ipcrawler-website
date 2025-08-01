@@ -55,7 +55,9 @@ const home = {
   subline: (
     <>
       IPCrawler&apos;s SmartList Engine analyzes discovered services and recommends the <strong>exact wordlists</strong> you need with confidence scores.
-      <br /> Features <strong>entropy-based diversification</strong>, <strong>privacy-first caching</strong>, and <strong>comprehensive audit capabilities</strong>.
+      <br />
+      <br />
+      Features <strong>entropy-based diversification</strong>, <strong>privacy-first caching</strong>, and <strong>comprehensive audit capabilities</strong>.
     </>
   ),
 };

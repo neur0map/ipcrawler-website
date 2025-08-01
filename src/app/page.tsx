@@ -4,6 +4,7 @@ import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Sche
 import { home, about, person, newsletter, baseURL, routes } from "@/resources";
 import { Discord } from "@/components";
 import { Posts } from "@/components/blog/Posts";
+import { HeroVideo } from "@/components/HeroVideo";
 
 export default function Home() {
   return (
@@ -78,60 +79,84 @@ export default function Home() {
         </Column>
 
         {/* Right side - Video */}
-        <RevealFx translateY={8} delay={0.25} flex={2} horizontal="center">
-          <div style={{
-            position: 'relative',
-            width: '100%',
-            maxWidth: '800px',
-            height: '450px',
-            perspective: '1000px',
-            padding: '-50px',
-          }}>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: '9% center',
-                borderRadius: '20px',
-                transform: 'rotateY(-15deg) rotateX(5deg)',
-                transformStyle: 'preserve-3d',
-                boxShadow: `
-                  0 25px 80px rgba(0, 0, 0, 0.4),
-                  0 15px 40px rgba(0, 0, 0, 0.3),
-                  0 5px 20px rgba(0, 0, 0, 0.2),
-                  inset 0 1px 0 rgba(255, 255, 255, 0.1)
-                `,
-                border: '1px solid var(--neutral-alpha-weak)',
-                opacity: '0.9',
-                filter: 'brightness(0.95) contrast(1.1)'
-              }}
-            >
-              <source src="/videos/hero_video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            {/* Additional shadow layer for more depth */}
-            <div style={{
-              position: 'absolute',
-              top: '30px',
-              left: '30px',
-              right: '-30px',
-              bottom: '-30px',
-              background: 'linear-gradient(135deg, rgba(0,0,0,0.15), rgba(0,0,0,0.08))',
-              borderRadius: '20px',
-              zIndex: -1,
-              transform: 'rotateY(-15deg) rotateX(5deg)',
-              filter: 'blur(20px)',
-              opacity: '0.7',
-              transition: 'opacity 1.2s ease-out 0.4s'
-            }} />
-          </div>
-        </RevealFx>
+        <HeroVideo />
       </Flex>
+
+      {/* Free Forever Banner */}
+      <RevealFx translateY={8} delay={0.28}>
+        <Flex 
+          fillWidth 
+          paddingY="32" 
+          paddingX="24" 
+          gap="16" 
+          vertical="center" 
+          horizontal="center"
+          style={{
+            background: 'linear-gradient(135deg, var(--brand-alpha-weak) 0%, var(--neutral-alpha-weak) 100%)',
+            borderRadius: 'var(--radius-l)',
+            border: '1px solid var(--neutral-alpha-weak)',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+          {/* Background decoration */}
+          <div style={{
+            position: 'absolute',
+            top: '-50%',
+            right: '-10%',
+            width: '300px',
+            height: '300px',
+            background: 'radial-gradient(circle, var(--brand-alpha-weak) 0%, transparent 70%)',
+            borderRadius: '50%',
+            filter: 'blur(60px)',
+            opacity: 0.5
+          }} />
+          <Column gap="12" horizontal="center" style={{ position: 'relative', zIndex: 1 }}>
+            <Text variant="heading-strong-l" align="center">
+              100% Free Forever
+            </Text>
+            <Text variant="body-default-m" onBackground="neutral-weak" align="center" style={{ maxWidth: '600px' }}>
+              No premium plans. No paywalls. No hidden costs. 
+              <br />
+              IPCrawler is MIT licensed and will always be free for everyone.
+            </Text>
+            <Row gap="16" paddingTop="8">
+              <Badge 
+                background="brand-alpha-weak" 
+                onBackground="brand-strong" 
+                textVariant="body-default-s"
+                paddingX="16"
+                paddingY="8">
+                <Row gap="8" vertical="center">
+                  <Icon name="github" size="s" />
+                  Open Source
+                </Row>
+              </Badge>
+              <Badge 
+                background="success-alpha-weak" 
+                onBackground="success-strong" 
+                textVariant="body-default-s"
+                paddingX="16"
+                paddingY="8">
+                <Row gap="8" vertical="center">
+                  <Icon name="check" size="s" />
+                  MIT License
+                </Row>
+              </Badge>
+              <Badge 
+                background="info-alpha-weak" 
+                onBackground="info-strong" 
+                textVariant="body-default-s"
+                paddingX="16"
+                paddingY="8">
+                <Row gap="8" vertical="center">
+                  <Icon name="shield" size="s" />
+                  Privacy First
+                </Row>
+              </Badge>
+            </Row>
+          </Column>
+        </Flex>
+      </RevealFx>
 
       {/* Installation */}
       <RevealFx translateY={8} delay={0.3}>
