@@ -78,7 +78,7 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Flex fillWidth mobileDirection="column" horizontal="center">
+      <Flex fillWidth direction="column" horizontal="center" className="m-flex-row">
         {about.avatar.display && (
           <Column
             className={styles.avatar}
