@@ -24,20 +24,20 @@ export default function Home() {
       />
       
       {/* Hero Section */}
-      <Flex fillWidth paddingY="24" gap="xl" mobileDirection="column" vertical="center">
+      <Flex fillWidth paddingY="l" gap="xl" mobileDirection="column" vertical="center">
         {/* Left side - Text content */}
         <Column flex={1} gap="m" horizontal="start">
           {home.featured.display && (
             <RevealFx translateY={4} delay={0.05} fillWidth horizontal="start" paddingBottom="24">
               <Badge 
                 background="brand-alpha-weak" 
-                paddingX="12" 
-                paddingY="4" 
+                paddingX="m" 
+                paddingY="xs" 
                 onBackground="brand-strong" 
                 textVariant="label-default-s" 
                 arrow={false}
                 href={home.featured.href}>
-                <Row paddingY="2">{home.featured.title}</Row>
+                <Row paddingY="xs">{home.featured.title}</Row>
               </Badge>
             </RevealFx>
           )}
@@ -63,7 +63,7 @@ export default function Home() {
               size="l"
               weight="default"
               arrowIcon>
-              <Flex gap="8" vertical="center" paddingRight="4">
+              <Flex gap="xs" vertical="center" paddingRight="xs">
                 {about.avatar.display && (
                   <Avatar
                     marginRight="8"
@@ -86,9 +86,9 @@ export default function Home() {
       <RevealFx translateY={8} delay={0.25}>
         <Flex 
           fillWidth 
-          paddingY="24" 
-          paddingX="24" 
-          gap="16" 
+          paddingY="l" 
+          paddingX="l" 
+          gap="m" 
           vertical="center" 
           horizontal="center"
           style={{
@@ -98,8 +98,8 @@ export default function Home() {
             position: 'relative',
             overflow: 'hidden'
           }}>
-          <Column gap="12" horizontal="center" style={{ position: 'relative', zIndex: 1 }}>
-            <Row gap="8" vertical="center">
+          <Column gap="m" horizontal="center" style={{ position: 'relative', zIndex: 1 }}>
+            <Row gap="xs" vertical="center">
               <Icon name="warning" size="m" onBackground="warning-strong" />
               <Text variant="heading-strong-m" onBackground="warning-strong">
                 Active Development
@@ -109,14 +109,14 @@ export default function Home() {
               IPCrawler is under constant development. Aiming for <strong>1-2 new plugins per week</strong> (fully tested) 
               plus at least <strong>1 plugin every two weeks</strong> based on HTB retired machines.
             </Text>
-            <Row gap="16" paddingTop="8">
+            <Row gap="m" paddingTop="xs">
               <Badge 
                 background="warning-alpha-weak" 
                 onBackground="warning-strong" 
                 textVariant="body-default-s"
-                paddingX="16"
-                paddingY="8">
-                <Row gap="8" vertical="center">
+                paddingX="m"
+                paddingY="xs">
+                <Row gap="xs" vertical="center">
                   <Icon name="code" size="s" />
                   Weekly Updates
                 </Row>
@@ -125,9 +125,9 @@ export default function Home() {
                 background="info-alpha-weak" 
                 onBackground="info-strong" 
                 textVariant="body-default-s"
-                paddingX="16"
-                paddingY="8">
-                <Row gap="8" vertical="center">
+                paddingX="m"
+                paddingY="xs">
+                <Row gap="xs" vertical="center">
                   <Icon name="cube" size="s" />
                   HTB-Tested
                 </Row>
@@ -141,9 +141,9 @@ export default function Home() {
       <RevealFx translateY={8} delay={0.32}>
         <Flex 
           fillWidth 
-          paddingY="32" 
-          paddingX="24" 
-          gap="16" 
+          paddingY="xl" 
+          paddingX="l" 
+          gap="m" 
           vertical="center" 
           horizontal="center"
           style={{
@@ -165,7 +165,7 @@ export default function Home() {
             filter: 'blur(60px)',
             opacity: 0.5
           }} />
-          <Column gap="12" horizontal="center" style={{ position: 'relative', zIndex: 1 }}>
+          <Column gap="m" horizontal="center" style={{ position: 'relative', zIndex: 1 }}>
             <Text variant="heading-strong-l" align="center">
               100% Free Forever
             </Text>
@@ -174,14 +174,14 @@ export default function Home() {
               <br />
               IPCrawler is MIT licensed and will always be free for everyone.
             </Text>
-            <Row gap="16" paddingTop="8">
+            <Row gap="m" paddingTop="xs">
               <Badge 
                 background="brand-alpha-weak" 
                 onBackground="brand-strong" 
                 textVariant="body-default-s"
-                paddingX="16"
-                paddingY="8">
-                <Row gap="8" vertical="center">
+                paddingX="m"
+                paddingY="xs">
+                <Row gap="xs" vertical="center">
                   <Icon name="github" size="s" />
                   Open Source
                 </Row>
@@ -190,9 +190,9 @@ export default function Home() {
                 background="success-alpha-weak" 
                 onBackground="success-strong" 
                 textVariant="body-default-s"
-                paddingX="16"
-                paddingY="8">
-                <Row gap="8" vertical="center">
+                paddingX="m"
+                paddingY="xs">
+                <Row gap="xs" vertical="center">
                   <Icon name="check" size="s" />
                   MIT License
                 </Row>
@@ -201,9 +201,9 @@ export default function Home() {
                 background="info-alpha-weak" 
                 onBackground="info-strong" 
                 textVariant="body-default-s"
-                paddingX="16"
-                paddingY="8">
-                <Row gap="8" vertical="center">
+                paddingX="m"
+                paddingY="xs">
+                <Row gap="xs" vertical="center">
                   <Icon name="shield" size="s" />
                   Privacy First
                 </Row>
@@ -215,7 +215,7 @@ export default function Home() {
 
       {/* Installation */}
       <RevealFx translateY={8} delay={0.3}>
-        <Column fillWidth gap="16">
+        <Column fillWidth gap="m">
           <Heading variant="heading-strong-m">
             Get Started in 30 Seconds
           </Heading>
@@ -249,19 +249,19 @@ export default function Home() {
 
       {/* OS Compatibility */}
       <RevealFx translateY={8} delay={0.35}>
-        <Column fillWidth gap="16">
+        <Column fillWidth gap="m">
           <Heading variant="heading-strong-m">
             Platform Compatibility
           </Heading>
-          <Row gap="24" wrap>
+          <Row gap="l" wrap>
             {/* macOS - Compatible */}
-            <Flex vertical="center" gap="8">
+            <Flex vertical="center" gap="xs">
               <Icon 
                 name="apple" 
                 size="l" 
                 onBackground="brand-strong" 
               />
-              <Column gap="4">
+              <Column gap="xs">
                 <Text variant="body-strong-s">macOS</Text>
                 <Badge background="success-weak" onBackground="success-strong">
                   Compatible
@@ -270,13 +270,13 @@ export default function Home() {
             </Flex>
 
             {/* Linux - Compatible */}
-            <Flex vertical="center" gap="8">
+            <Flex vertical="center" gap="xs">
               <Icon 
                 name="linux" 
                 size="l" 
                 onBackground="brand-strong" 
               />
-              <Column gap="4">
+              <Column gap="xs">
                 <Text variant="body-strong-s">Linux</Text>
                 <Badge background="success-weak" onBackground="success-strong">
                   Compatible
@@ -285,13 +285,13 @@ export default function Home() {
             </Flex>
 
             {/* Hack The Box - Compatible */}
-            <Flex vertical="center" gap="8">
+            <Flex vertical="center" gap="xs">
               <Icon 
                 name="hackthebox" 
                 size="l" 
                 onBackground="brand-strong" 
               />
-              <Column gap="4">
+              <Column gap="xs">
                 <Text variant="body-strong-s">Hack The Box</Text>
                 <Badge background="success-weak" onBackground="success-strong">
                   Compatible
@@ -300,13 +300,13 @@ export default function Home() {
             </Flex>
 
             {/* Windows - Not Compatible */}
-            <Flex vertical="center" gap="8">
+            <Flex vertical="center" gap="xs">
               <Icon 
                 name="windows" 
                 size="l" 
                 onBackground="neutral-weak" 
               />
-              <Column gap="4">
+              <Column gap="xs">
                 <Text variant="body-strong-s">Windows</Text>
                 <Badge background="danger-weak" onBackground="danger-strong">
                   Not Compatible

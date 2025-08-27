@@ -7,7 +7,7 @@ export default function UnderConstruction() {
   return (
     <Column maxWidth="s" gap="xl" horizontal="center">
       {/* Hero Section */}
-      <Flex fillWidth paddingY="40" vertical="center" horizontal="center">
+      <Flex fillWidth paddingY="xl" vertical="center" horizontal="center">
         <Column gap="xl" horizontal="center" maxWidth="s">
           
           {/* Construction Icon & Animation */}
@@ -155,13 +155,11 @@ export default function UnderConstruction() {
 
           {/* Status Badges */}
           <RevealFx translateY={8} delay={0.4}>
-            <Row gap="12" wrap horizontal="center">
+            <Row gap="m" wrap horizontal="center">
               <Badge 
                 background="warning-alpha-weak" 
-                onBackground="warning-strong"
-                paddingX="12"
-                paddingY="6">
-                <Row gap="6" vertical="center">
+                onBackground="warning-strong">
+                <Row gap="xs" vertical="center">
                   <div style={{
                     width: '8px',
                     height: '8px',
@@ -174,10 +172,8 @@ export default function UnderConstruction() {
               
               <Badge 
                 background="brand-alpha-weak" 
-                onBackground="brand-strong"
-                paddingX="12"
-                paddingY="6">
-                <Row gap="6" vertical="center">
+                onBackground="brand-strong">
+                <Row gap="xs" vertical="center">
                   <Icon name="code" size="xs" />
                   Coming Soon
                 </Row>
@@ -185,10 +181,8 @@ export default function UnderConstruction() {
               
               <Badge 
                 background="info-alpha-weak" 
-                onBackground="info-strong"
-                paddingX="12"
-                paddingY="6">
-                <Row gap="6" vertical="center">
+                onBackground="info-strong">
+                <Row gap="xs" vertical="center">
                   <Icon name="time" size="xs" />
                   ETA: Soon™
                 </Row>
@@ -212,7 +206,7 @@ export default function UnderConstruction() {
                 size="l"
                 weight="default"
                 arrowIcon>
-                <Flex gap="8" vertical="center">
+                <Flex gap="xs" vertical="center">
                   <Icon name="home" size="s" />
                   Back to Home
                 </Flex>
