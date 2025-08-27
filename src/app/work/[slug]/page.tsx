@@ -70,7 +70,7 @@ export default async function DocumentationPage({
         }}
       />
       <Column maxWidth="xs" gap="16">
-        <Button data-border="rounded" href="/work" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
+        <Button data-border="rounded" href="/under-construction" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
           Documentation
         </Button>
         <Heading variant="display-strong-s">{post.metadata.title}</Heading>

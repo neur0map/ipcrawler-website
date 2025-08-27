@@ -24,9 +24,9 @@ export default function Home() {
       />
       
       {/* Hero Section */}
-      <Flex fillWidth paddingY="24" gap="xl" mobileDirection="column">
+      <Flex fillWidth paddingY="24" gap="xl" mobileDirection="column" vertical="center">
         {/* Left side - Text content */}
-        <Column flex={3} gap="m" horizontal="start">
+        <Column flex={1} gap="m" horizontal="start">
           {home.featured.display && (
             <RevealFx translateY={4} delay={0.05} fillWidth horizontal="start" paddingBottom="24">
               <Badge 
@@ -72,18 +72,73 @@ export default function Home() {
                     size="m"
                   />
                 )}
-                Learn About SmartList
+                Learn About IPCrawler
               </Flex>
             </Button>
           </RevealFx>
         </Column>
 
         {/* Right side - Video */}
-        <HeroVideo />
+        <HeroVideo key="hero-video-demo" />
       </Flex>
 
+      {/* Active Development Banner */}
+      <RevealFx translateY={8} delay={0.25}>
+        <Flex 
+          fillWidth 
+          paddingY="24" 
+          paddingX="24" 
+          gap="16" 
+          vertical="center" 
+          horizontal="center"
+          style={{
+            background: 'linear-gradient(135deg, var(--warning-alpha-weak) 0%, var(--warning-alpha-medium) 100%)',
+            borderRadius: 'var(--radius-l)',
+            border: '1px solid var(--warning-alpha-medium)',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+          <Column gap="12" horizontal="center" style={{ position: 'relative', zIndex: 1 }}>
+            <Row gap="8" vertical="center">
+              <Icon name="warning" size="m" onBackground="warning-strong" />
+              <Text variant="heading-strong-m" onBackground="warning-strong">
+                Active Development
+              </Text>
+            </Row>
+            <Text variant="body-default-m" onBackground="warning-weak" align="center" style={{ maxWidth: '600px' }}>
+              IPCrawler is under constant development. Aiming for <strong>1-2 new plugins per week</strong> (fully tested) 
+              plus at least <strong>1 plugin every two weeks</strong> based on HTB retired machines.
+            </Text>
+            <Row gap="16" paddingTop="8">
+              <Badge 
+                background="warning-alpha-weak" 
+                onBackground="warning-strong" 
+                textVariant="body-default-s"
+                paddingX="16"
+                paddingY="8">
+                <Row gap="8" vertical="center">
+                  <Icon name="code" size="s" />
+                  Weekly Updates
+                </Row>
+              </Badge>
+              <Badge 
+                background="info-alpha-weak" 
+                onBackground="info-strong" 
+                textVariant="body-default-s"
+                paddingX="16"
+                paddingY="8">
+                <Row gap="8" vertical="center">
+                  <Icon name="cube" size="s" />
+                  HTB-Tested
+                </Row>
+              </Badge>
+            </Row>
+          </Column>
+        </Flex>
+      </RevealFx>
+
       {/* Free Forever Banner */}
-      <RevealFx translateY={8} delay={0.28}>
+      <RevealFx translateY={8} delay={0.32}>
         <Flex 
           fillWidth 
           paddingY="32" 
@@ -164,19 +219,31 @@ export default function Home() {
           <Heading variant="heading-strong-m">
             Get Started in 30 Seconds
           </Heading>
-          <CodeBlock
-            codes={[
-              {
-                code: `# Clone and install IPCrawler
-git clone https://github.com/neur0map/ipcrawler.git
-cd ipcrawler
-make install`,
-                language: "shell",
-                label: "Installation"
-              }
-            ]}
-            copyButton={true}
-          />
+          <div style={{
+            background: 'var(--neutral-alpha-weak)',
+            border: '1px solid var(--neutral-alpha-medium)',
+            borderRadius: '12px',
+            padding: '20px',
+            fontFamily: 'monospace',
+            fontSize: '14px',
+            lineHeight: '1.6',
+            position: 'relative'
+          }}>
+            <div style={{ 
+              color: 'var(--neutral-weak)', 
+              marginBottom: '4px',
+              fontSize: '13px',
+              fontWeight: '500'
+            }}>
+              Installation
+            </div>
+            <div style={{ color: 'var(--neutral-on-background-strong)' }}>
+              # Clone and build IPCrawler<br/>
+              git clone https://github.com/ipcrawler/ipcrawler.git<br/>
+              cd ipcrawler<br/>
+              make build
+            </div>
+          </div>
         </Column>
       </RevealFx>
 

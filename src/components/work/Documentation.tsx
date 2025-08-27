@@ -23,7 +23,7 @@ export function Documentation({ range }: DocumentationProps) {
         <DocumentationCard
           priority={index < 2}
           key={post.slug}
-          href={`work/${post.slug}`}
+          href="/under-construction"
           images={post.metadata.images}
           title={post.metadata.title}
           description={post.metadata.summary}

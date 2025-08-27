@@ -72,7 +72,7 @@ export default async function Blog({
               image: `${baseURL}${person.avatar}`,
             }}
           />
-          <Button data-border="rounded" href="/blog" weight="default" variant="tertiary" size="s" prefixIcon="chevronLeft">
+          <Button data-border="rounded" href="/under-construction" weight="default" variant="tertiary" size="s" prefixIcon="chevronLeft">
             Posts
           </Button>
           <Heading variant="display-strong-s">{post.metadata.title}</Heading>

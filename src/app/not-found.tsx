@@ -7,18 +7,14 @@ export default function NotFound() {
         404
       </Text>
       <Heading marginBottom="l" variant="display-default-xs">
-        Directory Not Found
+        Under Construction
       </Heading>
       <Text onBackground="neutral-weak">
-        Looks like you hit a dead end. Unlike HTB enumeration, this path doesn&apos;t exist. 
-        Let SmartList help you find the directories that actually matter.
+        This section is under construction. We're building amazing content for IPCrawler.
       </Text>
       <Flex gap="s" marginTop="l">
         <Button href="/" variant="primary">
           Back to Home
-        </Button>
-        <Button href="/work/smartlist-algorithm" variant="secondary">
-          Learn SmartList
         </Button>
       </Flex>
     </Column>
