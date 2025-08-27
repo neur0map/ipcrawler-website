@@ -104,7 +104,7 @@ const about = {
             Running reconnaissance tools one at a time, waiting for each to finish
           </>,
           <>
-            Waiting 10+ minutes for full Nmap scans when you just need to know what's open
+            Waiting 10+ minutes for full Nmap scans when you just need to know what&apos;s open
           </>,
           <>
             No real-time feedback while tools are running in the background

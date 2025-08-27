@@ -10,7 +10,7 @@ export default function NotFound() {
         Under Construction
       </Heading>
       <Text onBackground="neutral-weak">
-        This section is under construction. We're building amazing content for IPCrawler.
+        This section is under construction. We&apos;re building amazing content for IPCrawler.
       </Text>
       <Flex gap="s" marginTop="l">
         <Button href="/" variant="primary">

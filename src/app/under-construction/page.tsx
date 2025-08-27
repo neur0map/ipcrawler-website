@@ -66,7 +66,7 @@ export default function UnderConstruction() {
           {/* Subtitle */}
           <RevealFx translateY={8} delay={0.25}>
             <Text variant="heading-default-l" onBackground="neutral-weak" align="center">
-              We're building something amazing for you
+              We&apos;re building something amazing for you
             </Text>
           </RevealFx>
 
@@ -123,7 +123,7 @@ export default function UnderConstruction() {
                 <div style={{ color: 'var(--neutral-weak)' }}>$ git status</div>
                 <div style={{ color: 'var(--brand-strong)', marginTop: '8px' }}>
                   On branch main<br/>
-                  Your branch is ahead of 'origin/main' by 47 commits.
+                  Your branch is ahead of &apos;origin/main&apos; by 47 commits.
                 </div>
                 <div style={{ color: 'var(--warning-strong)', marginTop: '8px' }}>
                   Changes to be committed:<br/>
@@ -199,7 +199,7 @@ export default function UnderConstruction() {
           {/* Description */}
           <RevealFx translateY={8} delay={0.45}>
             <Text variant="body-default-l" onBackground="neutral-weak" align="center" style={{ maxWidth: '480px' }}>
-              We're crafting comprehensive documentation and insightful blog posts about IPCrawler. 
+              We&apos;re crafting comprehensive documentation and insightful blog posts about IPCrawler. 
               Check back soon for guides, tutorials, and the latest updates on reconnaissance automation.
             </Text>
           </RevealFx>
@@ -251,7 +251,7 @@ export default function UnderConstruction() {
 
 export const metadata = {
   title: 'Under Construction - IPCrawler',
-  description: 'This section is under construction. We\'re building amazing documentation and blog content for IPCrawler.',
+  description: 'This section is under construction. We&apos;re building amazing documentation and blog content for IPCrawler.',
   robots: {
     index: false,
     follow: true,
