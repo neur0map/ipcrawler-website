@@ -8,7 +8,7 @@ export default function UnderConstruction() {
     <Column maxWidth="s" gap="xl" horizontal="center">
       {/* Hero Section */}
       <Flex fillWidth paddingY="40" vertical="center" horizontal="center">
-        <Column gap="xl" horizontal="center" maxWidth="600">
+        <Column gap="xl" horizontal="center" maxWidth="s">
           
           {/* Construction Icon & Animation */}
           <RevealFx translateY={8} delay={0.1}>
