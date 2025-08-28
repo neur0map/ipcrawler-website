@@ -3,6 +3,7 @@ import '@once-ui-system/core/css/tokens.css';
 import '@/resources/custom.css'
 
 import classNames from "classnames";
+import Script from "next/script";
 
 import { Background, Column, Flex, Meta, opacity, SpacingToken } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from '@/components';
@@ -143,6 +144,11 @@ export default async function RootLayout({
           }}
         />
       </head>
+      <Script
+        src="https://app.rybbit.io/api/script.js"
+        data-site-id="2255"
+        strategy="afterInteractive"
+      />
       <Providers>
         <Column as="body" background="page" fillWidth style={{minHeight: "100vh"}} margin="0" padding="0" horizontal="center">
           <Background
